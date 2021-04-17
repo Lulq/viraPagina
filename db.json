@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "nome": "Luiz",
+      "idade": 34,
+      "genero_favorito": "Ficção Científica",
+      "estado": "PE",
+      "cidade": "Timbaúba"
+    },
+    {
+      "nome": "Ragnar",
+      "idade": 42,
+      "genero_favorito": "Guerra",
+      "estado": "DE",
+      "cidade": "Kattegat"
+    },
+    {
+      "nome": "Moara",
+      "idade": 31,
+      "genero_favorito": "Romance",
+      "estado": "PE",
+      "cidade": "Recife"
+    }
+  ],
+  "livros": [
+    {
+      "titulo": "O mundo de Sofia",
+      "autor": "Jostein Gaarder",
+      "genero": "Romance",
+      "sub_genero": "Filosofia",
+      "edicao": 1,
+      "ano": 1991,
+      "editora": "AvaLivros"
+    },
+    {
+      "titulo": "Cem anos de solidão",
+      "autor": "Gabriel García Marquez",
+      "genero": "Romance",
+      "sub_genero": "Realismo Fantástico",
+      "edicao": 1,
+      "ano": 1967,
+      "editora": "AvaLivros"
+    },
+    {
+      "titulo": "Pai Rico, Pai Pobre",
+      "autor": "Robert Kiyosaki",
+      "genero": "Finança pessoais",
+      "sub_genero": "Não ficção",
+      "edicao": 4,
+      "ano": 1997,
+      "editora": "AvaLivros"
+    },
+    {
+      "titulo": "Como Eu Era Antes de Você",
+      "autor": "Jojo Moyes",
+      "genero": "Romance",
+      "sub_genero": "Superação",
+      "edicao": 1,
+      "ano": 2016,
+      "editora": "Intrínseca LTDA"
+    }
+  ]
+}
