@@ -1,8 +1,8 @@
-
 module.exports = (sequelize, DataTypes) => {
+
     const Usuario = sequelize.define(
         'Usuario', {
-            nome: DataTypes.STRING,
+            nome: DataTypes.STRING
             cpf: DataTypes.STRING,
             telefone: DataTypes.STRING,
             login: DataTypes.STRING,
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     Usuario.associate = (models) => { //models recebe todos os models da pasta models
         // 1 usuário pode ter vários livros: relação 1:N
         // cria a relação de usuários com livros:
-        Usuario.hasmany(models.Livro, {as: "livros", foreignKey: 'usuario_id'}) 
+        Usuario.hasmany(models.Livro, {as: "livros", foreignKey: 'usuario_id'}) ;
 
     }
     return Usuario;
