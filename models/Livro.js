@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             isbn : DataTypes.STRING,
             editora : DataTypes.STRING,
             ano : DataTypes.TIME,
-            quantidade: DatyTypes.INT,
+            quantidade: DataTypes.INTEGER,
             conservacao: DataTypes.STRING,
             venda : DataTypes.INTEGER,
             troca : DataTypes.INTEGER,
