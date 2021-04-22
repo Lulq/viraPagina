@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     )
     Genero.associate = (models) => {
-        Genero.belongsTo(models.Livro, {as:"livro", foreignKey: 'genero_id'})
+        // mais de um genero pode ser associado a mais de um livro
+        Genero.hasMany(models.Livro, {as:"livros", foreignKey: 'genero_id'})
 
     }
     return Genero

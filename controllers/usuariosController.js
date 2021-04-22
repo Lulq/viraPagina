@@ -1,8 +1,10 @@
-const { Usuario , sequelize } = require('../models');
+const { Usuario, sequelize } = require('../models');
 
 const usuariosController = {
     index: async (req, res) => {
-        let usuarios = await Usuario.findAll();
+        let usuarios = await Usuario.findAll(
+            { include: ["livros", "endereco_usuario" ] }
+        );
         return res.json(usuarios);
     },
 
@@ -21,7 +23,7 @@ const usuariosController = {
     },
 
     update: async (req, res) => {
-        const {nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body
+        const { nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body
         var alterarUsuario = await Usuario.update({
             nome,
             cpf,
@@ -30,8 +32,8 @@ const usuariosController = {
             senha,
             livros_favoritos,
             imagem
-        },{
-            where: { id : req.params.id } 
+        }, {
+            where: { id: req.params.id }
         })
         return res.json(alterarUsuario)
     },

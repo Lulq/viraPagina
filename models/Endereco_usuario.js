@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     Endereco_usuario.associate = (models) => { //models recebe todos os models da pasta models
         // 1 usuário pode ter vários livros: relação 1:N
         // cria a relação de usuários com livros:
-        Endereco_usuario.belongsTo(models.Usuario, {as: "endereco_usuario", foreignKey: 'endereco_id'}) ;
+        Endereco_usuario.belongsTo(models.Usuario, {as: "endereco_usuario", foreignKey: 'usuario_id'}) ;
         
     }
     

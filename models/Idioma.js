@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
     )
     
     Idioma.associate = (models) => {
-        Idioma.belongsTo(models.Livro, {as:"livro", foreignKey: 'idioma_id'})
+        // um idioma pode ser associado a mais de um livro, mas um livro só pode ter um idioma 
+        Idioma.hasMany(models.Livro, {as:"livros", foreignKey: 'idioma_id'})
 
     }
 
