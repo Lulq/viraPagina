@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     )
 
     Autor.associate = (models) => {
-        Autor.belongsTo(models.Livro, {as:"livros", foreignKey: "autor_id"})
+        //um autor pode ser associado a vários livros
+        Autor.hasMany(models.Livro, {as:"livros", foreignKey: "autor_id"})
     }
 
     return Autor

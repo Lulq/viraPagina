@@ -4,7 +4,7 @@ const { Livro , sequelize } = require('../models')
 const livrosController = {
     index: async ( req, res ) => {
         let livros = await Livro.findAll({
-            include : ['usuario', 'idioma', 'genero']
+            include : ['usuario', 'idioma', 'autor', 'genero']
         })
         return res.json(livros);
     },

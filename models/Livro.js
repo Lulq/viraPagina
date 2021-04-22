@@ -25,10 +25,10 @@ module.exports = (sequelize, DataTypes) => {
         // varios livros de um usuario
         Livro.belongsTo(models.Usuario, {as: "usuario", foreignKey: 'usuario_id'}) 
         // livro pode ter mais de um autor
-        Livro.hasMany(models.Autor, {as:"autor", foreignKey: "autor_id"})
+        Livro.belongsTo(models.Autor, {as:"autor", foreignKey: "autor_id"})
         // mais de um livro pode ser associado a um idioma N:1
         Livro.belongsTo(models.Idioma, {as:"idioma", foreignKey: "idioma_id"})
-        // mais de um livro pode ser associado a mais de um genero
+        // varios livros de um mesmo genero
         Livro.belongsTo(models.Genero, {as:"genero", foreignKey: "genero_id"})
 
 
