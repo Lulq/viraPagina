@@ -16,10 +16,8 @@ const livrosController = {
         return res.json(novoLivro)
     },
     update: async (req, res) => {
-        let {titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id } = req.body
-        var alterarLivro = await Livro.update({
-            titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id
-        },{
+        let novaInfo = req.body
+        let alterarLivro = await Livro.update( novaInfo,{ //exemplo
             where : { id : req.params.id }
         })
         return res.json(alterarLivro)

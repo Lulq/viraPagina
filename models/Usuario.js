@@ -10,11 +10,16 @@ module.exports = (sequelize, DataTypes) => {
             livros_favoritos: DataTypes.STRING,
             livros_id: DataTypes.INTEGER,
             imagem: DataTypes.STRING,
-            endereco_id: DataTypes.INTEGER
+            endereco_id: DataTypes.INTEGER,
+            created_at: DataTypes.TIME,
+            updated_at: DataTypes.TIME
 
         }, {
             tableName: "usuarios",
-            timestamps: false
+            timestamps: true,
+            createdAt: false,
+            updatedAt: false
+
         }
     )
 

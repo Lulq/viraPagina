@@ -21,17 +21,8 @@ const enderecosController = {
     },
     
     update: async (req, res) => {
-        let { rua, numero, complemento, bairro, cidade, estado, cep } = req.body
-        let editarEndereco = await Endereco_usuario.update(
-            {
-            rua, 
-            numero, 
-            complemento, 
-            bairro, 
-            cidade, 
-            estado, 
-            cep
-            },
+        let novaInfo = req.body
+        let editarEndereco = await Endereco_usuario.update(novaInfo,
             { 
                 where: {id : req.params.id}
             }

@@ -22,6 +22,7 @@ const usuariosController = {
             senha: senhaCrypt,
             livros_favoritos,
             imagem
+            
         })
         return res.json(novoUsuario)
     },
@@ -37,7 +38,7 @@ const usuariosController = {
             login,
             senha: senhaCrypt,
             livros_favoritos,
-            imagem
+            imagem            
         }, {
             where: { id: req.params.id }
         })
