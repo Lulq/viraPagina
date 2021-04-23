@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const usuariosController = require('../controllers/usuariosController');
+const ValidarCadastro = require("../middlewares/ValidarCadastro")
 
 /* GET - Lista todos os usuários */
 router.get('/', usuariosController.index);
-router.post('/', usuariosController.create);
+router.post('/', ValidarCadastro, usuariosController.create);
 
 
 router.put('/:id', usuariosController.update);
