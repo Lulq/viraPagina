@@ -9,8 +9,8 @@ const ValidarModificacaoUsuario = require("../middlewares/ValidarModificacaoUsua
 router.get('/', usuariosController.index);
 router.post('/', ValidarCadastro, usuariosController.create);
 
-
 router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
 router.delete('/:id', usuariosController.delete);
+
 
 module.exports = router;

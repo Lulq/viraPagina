@@ -1,3 +1,4 @@
+
 const { Usuario, sequelize } = require('../models');
 
 const usuariosController = {
@@ -43,6 +44,7 @@ const usuariosController = {
             where: { id }
         })
         return res.json(deletarUsuario)
+
     }
 }
 
