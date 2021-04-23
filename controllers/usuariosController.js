@@ -1,4 +1,5 @@
 const { Usuario, sequelize } = require('../models');
+const bcrypt = require('bcryptjs')
 
 const usuariosController = {
     index: async (req, res) => {
@@ -10,12 +11,15 @@ const usuariosController = {
 
     create: async (req, res) => {
         let { nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body;
+        
+        const senhaCrypt = bcrypt.hashSync(senha, 10)
+        
         let novoUsuario = await Usuario.create({
             nome,
             cpf,
             telefone,
             login,
-            senha,
+            senha: senhaCrypt,
             livros_favoritos,
             imagem
         })
@@ -24,12 +28,14 @@ const usuariosController = {
 
     update: async (req, res) => {
         const { nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body
+        const senhaCrypt = bcrypt.hashSync(senha, 10)
+
         var alterarUsuario = await Usuario.update({
             nome,
             cpf,
             telefone,
             login,
-            senha,
+            senha: senhaCrypt,
             livros_favoritos,
             imagem
         }, {
