@@ -1,4 +1,6 @@
 const { Livro , sequelize } = require('../models')
+const { v4 : uuidv4 } = require('uuid')
+let uuid = uuidv4()
 
 
 const livrosController = {
@@ -11,7 +13,20 @@ const livrosController = {
     create: async (req, res) => {
         let {titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id } = req.body
         let novoLivro = await Livro.create({
-            titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id
+            id : uuid,
+            titulo, 
+            isbn, 
+            editora, 
+            ano, 
+            quantidade, 
+            conservacao, 
+            venda, 
+            troca, 
+            imagem, 
+            usuario_id, 
+            idioma_id, 
+            autor_id, 
+            genero_id
         })
         return res.json(novoLivro)
     },

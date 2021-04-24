@@ -1,5 +1,7 @@
 const { Usuario, sequelize } = require('../models');
 const bcrypt = require('bcryptjs')
+const { v4: uuidv4 } = require('uuid');
+let uuid = uuidv4()
 
 const usuariosController = {
     index: async (req, res) => {
@@ -12,9 +14,10 @@ const usuariosController = {
     create: async (req, res) => {
         let { nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body;
         
-        const senhaCrypt = bcrypt.hashSync(senha, 10)
+        let senhaCrypt = bcrypt.hashSync(senha, 10)
         
         let novoUsuario = await Usuario.create({
+            id : uuid,
             nome,
             cpf,
             telefone,
