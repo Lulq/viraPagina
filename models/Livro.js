@@ -13,10 +13,14 @@ module.exports = (sequelize, DataTypes) => {
             usuario_id : DataTypes.INTEGER,
             idioma_id : DataTypes.INTEGER,
             autor_id: DataTypes.INTEGER,
-            genero_id : DataTypes.INTEGER
+            genero_id : DataTypes.INTEGER,
+            created_at: DataTypes.TIME,
+            updated_at: DataTypes.TIME
         }, {
             tableName: "livros",
-            timestamps: false
+            timestamps: true,
+            createdAt: false,
+            updatedAt: false
         }
     )
     Livro.associate = (models) => { //models recebe todos os models da pasta models

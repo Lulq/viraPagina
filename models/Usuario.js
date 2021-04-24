@@ -10,11 +10,16 @@ module.exports = (sequelize, DataTypes) => {
             livros_favoritos: DataTypes.STRING,
             livros_id: DataTypes.INTEGER,
             imagem: DataTypes.STRING,
-            endereco_id: DataTypes.INTEGER
+            endereco_id: DataTypes.INTEGER,
+            created_at: DataTypes.TIME,
+            updated_at: DataTypes.TIME
 
         }, {
             tableName: "usuarios",
-            timestamps: false
+            timestamps: true,
+            createdAt: false,
+            updatedAt: false
+
         }
     )
 
@@ -22,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         // 1 usuário pode ter vários livros: relação 1:N
         // cria a relação de usuários com livros:
         Usuario.hasMany(models.Livro, {as: "livros", foreignKey: 'usuario_id'}) ;
+        // cria a relação de usuário com o seu endereço, um usuário pode cadastrar mais de um endereço.
         Usuario.hasMany(models.Endereco_usuario, {as:"endereco_usuario", foreignKey: "usuario_id"})
     }
 
