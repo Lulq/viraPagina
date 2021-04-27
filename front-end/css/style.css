@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+ 
+ /* Cabeçalho    */
+
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    position:fixed;
+    z-index: 3;
+    top:0;
+    right:0;
+    width:100%;
+
+}
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+    padding-right: 9px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.header-left p {
+    padding-left: 32px;
+}
+
+.header-right {
+    width: 212px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.header-right button {
+    border:none;
+    border-radius:8px;
+    width: 100px;
+    height: 40px;
+    font-size:14px;
+    font-weight: 700;
+   
+}
+
+.header-right button.left {
+    background-color:rgba(241,228,255,1);
+    color: rgba(140,48,245,1);
+   
+    
+    
+    
+}
+
+.header-right button.right {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+/* Centro-superior */
+
+.top-content {
+    
+    position: relative;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px;
+}
