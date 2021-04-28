@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:display=swap');
+
 
 body {
     font-family: 'Manrope', sans-serif;
- 
+     
  /* Cabeçalho    */
 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header {
     display: flex;
@@ -38,6 +45,7 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
+    font-weight: 700;
 }
 
 .header-left p {
@@ -50,7 +58,7 @@ header {
     justify-content: space-between;
 }
 
-.header-right button {
+button {
     border:none;
     border-radius:8px;
     width: 100px;
@@ -79,9 +87,216 @@ header {
 .top-content {
     
     position: relative;
-    top: 50px;
+    top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 50px;
+    margin-bottom: 130px;
+    
+}
+
+.top-left {
+    max-width: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-weight: 800;
+  
+}
+
+.top-right {
+    max-width: 10%;
+}
+
+.top-right form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.top-right input{
+    width: 30vw;
+    border-radius: 8px;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 18px 10px;
+    margin-bottom: 10px;
+}
+
+.top-right button {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+/* Meio  */
+
+
+.middle-content .middle-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.middle-content .main-image {
+
+    max-width: 800px;   /*melhorar*/
+}
+
+.middle-content h2 {
+    width: 400px;
+    font-size: 35px;
+    font-weight: 700;
+   
+    text-align: center;
+    
+}
+
+.middle-bottom {
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+.middle-bottom-left {
+
+    display:flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.middle-bottom-right{
+    /* padding-left:100px; */
+    justify-content:flex-end;
+    max-width: 50%;
+    padding:100px 20px;
+}
+.middle-bottom-right h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.middle-bottom-right p {
+    font-size: 14px;
+    font-weight: 400;   /*não funciona*/
+    line-height: 32px;
+}
+
+.il-1::marker {
+    color:rgba(160, 220, 255, 1);
+}
+.il-2::marker {
+    color:rgba(255, 195, 216, 1);
+}
+.il-3::marker {
+    color:rgba(193, 229, 192, 1);
+}
+
+
+/* mosaico de imagens e pontos */
+
+
+.lim-1 {
+    /* display:flex; */
+    position:absolute;
+}
+
+.lim-1::marker {
+    position:relative;
+    color: rgba(255, 194, 120, 1);
+    font-size: 200px;
+
+    
+    
+    /* unicode-bidi: unset !important;
+    font-variant-numeric: unset !important;
+    text-indent: unset !important;
+    text-align: unset !important;
+    text-align-last: unset !important;
+    text-transform: unset !important; */
+     
+}
+.lim-1 img {
+    width:308px;
+}
+
+.lim-2::marker{
+    color:rgba(160, 220, 255, 1);
+    font-size: 100px;
+}
+.lim-2 img {
+    width:308px;
+}
+
+.lim-3::marker{
+    color:rgba(243, 159, 159, 1);
+    font-size: 100px;
+}
+.lim-3 img {
+    width:186px;
+}
+
+
+/* FOOTER */
+
+footer {
+    position:absolute;
+    height: 280px;
+    margin: 0;
+    width:100vw;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 56px;
+    background-color: rgba(11, 13, 23, 1);
+    color: white;
+    font-size: 15px;
+}
+
+footer .footer-left {
+    width: auto;
+    display:flex;
+    flex-direction: column;
+   
+    
+}
+
+footer .footer-left img {
+    width: 39px;
+    margin-bottom: 20px;
+}
+
+footer .footer-left .linha-1 {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+footer .footer-left .linha-2 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer .footer-left .linha-2 p {
+    padding-right: 15px;
+}
+
+footer .footer-left .linha-3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .footer-right {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    left:-100px;
+    font-size: 17px;
+}
+
+.footer-right img {
+    width:135px;
 }
