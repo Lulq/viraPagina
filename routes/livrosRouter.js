@@ -5,6 +5,9 @@ const ValidarLivro = require('../middlewares/ValidarLivro')
 const ValidarModificacaoLivro = require('../middlewares/ValidarModificacaoLivro')
 
 router.get('/', livrosController.index)
+
+router.get('/:id', livrosController.livro)  // buscar um livro específico
+
 router.post('/', ValidarLivro, livrosController.create)
 router.put('/:id', ValidarModificacaoLivro, livrosController.update)
 router.delete('/:id', livrosController.delete)

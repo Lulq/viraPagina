@@ -8,8 +8,24 @@ const livrosController = {
         let livros = await Livro.findAll({
             include : ['usuario', 'idioma', 'autor', 'genero']
         })
+       
         return res.json(livros);
     },
+
+    livro: async ( req, res ) => {
+        const { id } = req.params
+        let livro = await Livro.findOne(
+            {
+                include : ['usuario', 'idioma', 'autor', 'genero'],
+                where: { id }  
+            })
+
+        console.log(`Este é o ID recebido do url: ${id}`)
+        console.log(JSON.stringify(livro, null, 2))
+        
+        return res.render('perfilLivro',{ livro  });  // renderiza a view que queremos, passando o objeto livro
+    },
+
     create: async (req, res) => {
         let {titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id } = req.body
         let novoLivro = await Livro.create({
