@@ -6,6 +6,13 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "genero",
             timestamps: false
         }
-    );
+    )
+
+    Genero.associate = (models) => {
+        // mais de um genero pode ser associado a mais de um livro
+        Genero.hasMany(models.Livro, {as:"livros", foreignKey: 'genero_id'})
+
+    }
+    
     return Genero;
 }

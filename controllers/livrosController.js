@@ -1,8 +1,12 @@
 const { Livro , sequelize } = require('../models');
+const {v4: uuidv4} = require('uuid');
+let uuid = uuidv4();
 
 const livrosController = {
     index: async ( req, res ) => {
-        let livros = await Livro.findAll()
+        let livros = await Livro.findAll(
+            {include: ['usuario','idioma','autor','genero']}
+        )
         return res.json(livros);
     },
     create: async (req, res) => {
@@ -10,6 +14,7 @@ const livrosController = {
             usuario_id, idioma_id,autor_id,
             genero_id  } = req.body;
         let novoLivro = await Livro.create({
+            id: uuid,
             titulo,
             isbn, 
             editora,

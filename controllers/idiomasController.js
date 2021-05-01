@@ -1,4 +1,4 @@
-const { Idioma , sequelize } = require('../models');
+const { Idioma, sequelize } = require('../models');
 
 
 const idiomasController = {
@@ -15,25 +15,25 @@ const idiomasController = {
         return res.json(novoIdioma)
     },
 
-    update: async (req,res) => {
-        const {idioma} = req.body
-        let {id} = req.params
+    update: async (req, res) => {
+        const { idioma } = req.body
+        let { id } = req.params
         let alteraIdioma = await Idioma.update({
             idioma
         }, {
-            where: {id}
+            where: { id }
         })
         return res.json(alteraIdioma)
     },
-    delete: async (req,res) => {
-        let {id} = req.params
+    delete: async (req, res) => {
+        let { id } = req.params
         let deletarIdioma = await Idioma.destroy({
-            where: {id}
+            where: { id }
         })
 
         return res.json(deletarIdioma)
     }
-    
+
 
 }
 

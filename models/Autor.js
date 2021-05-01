@@ -6,7 +6,12 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "autor",
             timestamps: false
         }
-    );
+    )
+    Autor.associate = (models) => {
+        //um autor pode ser associado a vários livros
+        Autor.hasMany(models.Livro, {as:"livros", foreignKey: "autor_id"})
+    }
+    ;
     return Autor;
 }
 
