@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Ropa+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope+Alternates&display=swap');
+
+
+:root{
+    --default-white: rgba(255, 255, 255, 1);
+    --default-purple: rgba(140,48,245,1);
+    --weak-purple: rgba(214, 177, 255, 1);
+    --pastel-blue: rgba(160, 220, 255, 1);
+    --pastel-green:rgba(193, 229, 192, 1);
+    --pastel-pink:rgba(255, 195, 216, 1);
+
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin:0px;
+     
+ /* Cabeçalho    */
+
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+header {
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    position:fixed;
+    z-index: 10;
+    top:0;
+    right:0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    
+}
+
+/* Header com campo de busca */
+
+header #wfind.header-right{
+    display: flex;
+    max-width:450px;
+    width:450px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #wfind.header-right input {
+    width: 300px;
+    margin: 10px 10px;
+    padding: 5px;
+}
+header #wfind.header-right button {
+    width: 150px;
+    margin-right: 15px;
+
+}
+/* ================= Fim do Header com Campo de busca =================== */
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+    padding-right: 9px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-left p {
+    padding-left: 32px;
+}
+
+.header-right {
+    width: 212px;
+    display:flex;
+    justify-content: space-between;
+}
+
+button {
+    border:none;
+    border-radius:8px;
+    width: 100px;
+    height: 40px;
+    font-size:14px;
+    font-weight: 700;
+   
+}
+
+.header-right button.left {
+    background-color:rgba(241,228,255,1);
+    color: rgba(140,48,245,1);
+}
+
+.header-right button.right {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+/* Centro-superior */
+
+.top-content {
+    
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 130px;
+    
+}
+
+.top-left {
+    max-width: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-weight: 800;
+  
+}
+
+.top-right {
+    max-width: 10%;
+}
+
+.top-right form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.top-right input{
+    max-width: 30vw;
+    width: 510px;
+    margin-bottom: 10px;
+    padding: 18px 10px;
+}
+
+.top-right button {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+
+/* ================== Centro Superior Perfil Livro =====================*/
+
+#book-profile.top-content{
+    align-items: flex-start;
+}
+
+.top-left img#book-img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#book-info.top-right {
+    display:flex;
+    flex-direction: column;
+    max-width:400px;
+    align-items: flex-start;
+    height: auto;
+   
+}
+#book-info.top-right h3 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.profile-photo img{
+    display:flex;
+    width: 60px;
+     
+}
+
+.profile-label {
+    display:flex;
+    align-items: center;
+    
+}
+.name-title {
+    display:flex; 
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.info h5 {
+    color: rgba(140, 48, 245, 1);
+    font-size:24px;
+}
+
+#book-actions.buttons {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: auto;
+}
+
+#book-actions.buttons button{
+    margin-bottom: 15px;
+    width: 200px;
+    background-color: rgba(214, 177, 255, 1);
+    color: rgba(140, 48, 245, 1);
+}
+
+/* ========================INDEX ========================= */
+
+/* top-content */
+
+#index.top-content {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#index.top-content .top-left {
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#index.top-content .top-left h3 {
+    font-size:50px;
+    margin-bottom: 0px;
+
+}
+
+#index.top-content .top-left p {
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 25px;
+} 
+
+#index.top-content .top-left button {
+   background-color: rgba(140, 48, 245, 1);
+   color: rgba(255, 255, 255, 1);
+   width: 180px;
+   font-size: 16px;
+}
+
+
+#index.top-content .top-right{
+    max-width: 100%;
+}
+
+
+#index.top-content .top-right img{
+   max-width: 450px;
+}
+
+/* ===================== Depoimentos ===================== */
+
+.testimonials{
+    background-color: rgba(140, 48, 245, 1);
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    
+}
+
+.testimonials .headline {
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    color:rgba(255, 255, 255, 1);
+}
+
+.testimonials .headline img {
+    position:relative;
+    opacity: 30%;
+    margin-top: 30px;
+}
+
+.testimonials .container {
+    display: flex;
+    position:relative;
+    top:-20px;
+    
+}
+
+.testimonials .container article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:600px;
+    
+}
+
+article .trianguim {
+    position: relative;
+    width:20px;
+    top:-40px;
+    z-index:1;
+ 
+}
+
+
+
+article .container {
+    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    /* left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 27.63%; */
+    padding:20px;
+    margin:20px;
+    height:200px;
+    background: #d8d6d6;
+    border-radius: 10px;
+
+}
+
+article .profile-label {
+    position:relative;
+    color: var(--default-white);
+    top:-20px;
+}
+
+
+/* ==================  Meio Geral  =====================   */
+
+
+.middle-content .middle-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.middle-content .main-image {
+
+    max-width: 900px;   /*melhorar*/
+    margin-bottom: 80px;
+}
+
+.middle-content h2 {
+    width: 500px;
+    font-size: 48px;
+    font-weight: 700;
+   
+    text-align: center;
+    
+}
+
+.middle-bottom {
+    display:flex;
+    max-width: 100%;
+    justify-content: space-between;
+    padding-bottom: 150px;
+    position:relative;
+    left:140px;
+    
+}
+
+.middle-bottom-left {
+
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    max-width: 50%;;
+    left:10px;
+}
+
+.middle-bottom-right{
+    position:relative;
+    right:70px;
+    justify-content:flex-end;
+    max-width: 50%;
+    padding:100px;
+}
+.middle-bottom-right h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.middle-bottom-right p {
+    font-size: 14px;
+    font-weight: 400;   /*não funciona*/
+    line-height: 32px;
+}
+
+.il-1::marker {
+    color:rgba(160, 220, 255, 1);
+}
+.il-2::marker {
+    color:rgba(255, 195, 216, 1);
+}
+.il-3::marker {
+    color:rgba(193, 229, 192, 1);
+}
+
+
+/* --------mosaico de imagens e pontos----------- */
+
+.middle-bottom-left .circle {
+    width:80px;
+
+}
+
+.lim-1 {
+    position:absolute;
+    z-index:1;
+}
+.lim-1 .tile {
+    position:relative;
+    max-width:288px;
+    z-index: 6;
+    right:20px;
+}
+
+.lim-1 .circle {
+    position:absolute;
+    z-index: 5;
+    top: 175px;
+    left:220px;
+   
+}
+
+.lim-2 {
+    position:absolute;
+    top: 135px;
+    right:-120px;
+}
+
+
+.lim-2 .tile {
+    position:relative;
+    max-width:288px;
+    z-index:4;
+}
+
+.lim-2 .circle{
+    position:relative;
+    z-index:3;
+    top:220px;
+    left:-30px;
+}
+
+.lim-3 {
+    position:absolute;
+    top:380px;
+    left:10px;
+}
+
+
+.lim-3 .tile{
+    position:relative;
+    max-width:186px;
+    z-index: 8;
+    
+}
+.lim-3 .circle{
+    position:relative;
+    z-index: 1;
+    left:145px;
+    top:-45px;
+}
+
+
+/* ==================== MEIO INDEX ====================== */
+#index.middle-content{
+    width:73%;
+}
+
+
+
+/* ==================== FOOTER ======================= */
+
+footer {
+    
+    position:absolute;
+    
+    height: 280px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    padding-top: 56px;
+    background-color: rgba(11, 13, 23, 1);
+    color: white;
+    font-size: 15px;
+   
+    
+}
+
+footer .footer-left {
+    width: auto;
+    display:flex;
+    flex-direction: column;
+   
+    
+}
+
+footer .footer-left img {
+    width: 39px;
+    margin-bottom: 20px;
+}
+
+footer .footer-left .linha-1 {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+footer .footer-left .linha-2 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer .footer-left .linha-2 p {
+    padding-right: 15px;
+}
+
+footer .footer-left .linha-3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .footer-right {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    left:-100px;
+    font-size: 17px;
+}
+
+.footer-right img {
+    width:135px;
+}
