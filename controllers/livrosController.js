@@ -12,6 +12,18 @@ const livrosController = {
         return res.json(livros);
     },
 
+    buscar: async ( req, res ) => {
+        return res.render('buscaLivros');
+    },
+
+    found: async (req, res) => {
+        return res.render('livros-encontrados')
+    },
+
+    yourbooks: async (req, res) => {
+        res.render('seus-livros')
+    },
+
     livro: async ( req, res ) => {
         const { id } = req.params
         let livro = await Livro.findOne(
@@ -24,6 +36,10 @@ const livrosController = {
         console.log(JSON.stringify(livro, null, 2))
         
         return res.render('perfilLivro',{ livro  });  // renderiza a view que queremos, passando o objeto livro
+    },
+
+    gowpp: async (req, res) => {
+        return res.render('gowpp')
     },
 
     create: async (req, res) => {

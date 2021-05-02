@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
+
+body {
+        width: 100%;
+        margin: 0;
+}
+.modal-container{
+    position: absolute;
+    color: white;
+    background-color: #F39F9F ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mensagem {
+    font-family: "Manrope";
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagens{
+    margin-right: 120px;
+    display: flex;
+}
+
+.foto1 {
+    display: flex;
+    top: -90px;
+    position: relative;
+}
+
+.foto2 {
+    margin-top: 90px;
+    display: flex;
+    top: 0px;
+    position: relative;
+}
+
+.modal-container img {
+    margin-left: 0px;
+    margin-right: 50px;
+    box-shadow:0px 0px 25px rgba(0,0,0,0.5), 0px 0px 25px rgba(0,0,0,0.7);
+}
