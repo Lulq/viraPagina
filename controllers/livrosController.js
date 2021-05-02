@@ -9,6 +9,40 @@ const livrosController = {
         )
         return res.json(livros);
     },
+
+    buscar: async (req,res) => {
+        return res.render('buscaLivros')
+    },
+
+    found: async (req,res) => {
+        return res.render('resultadoBusca')
+    },
+
+    yourbooks: async (req, res) => {
+        return('seusLivros')
+    },
+
+    livro: async (req, res) => {
+        const {id} = req.params
+        let livro = await Livro.findOne (
+            {
+                include : ['usuario', 'idioma','autor', 'genero'],
+                where: {id}
+            }
+        ) 
+
+        console.log(`Este é o ID recebido pelo url: ${id}`)
+        console.log(JSON.stringify(livro, null, 2))
+
+        return res.render('perfilLivro', { livro});
+    },
+
+    gowpp: async (req, res) => {
+        return res.render('gowpp')
+    },
+
+
+
     create: async (req, res) => {
         let { titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, 
             usuario_id, idioma_id,autor_id,

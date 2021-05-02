@@ -19,4 +19,4 @@ module.exports = async (req, res, next) => {
     }
 }
 
-//TODO consertar este middleware que não deixa modificar apens cpf ou apenas login.
+//TODO consertar este middleware que não deixa modificar apenas cpf ou apenas login.
