@@ -1,0 +1,210 @@
+body {
+    font-family: 'Montserrat Alternates';
+    width: 100%;
+  }
+  
+   
+  
+    .container { 
+      width: 100%;
+      max-width: 100%;
+    }
+  
+  main {
+    width: 100%;
+    /* align-items: center; */
+  
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+  }
+  
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: space-evenly;
+  }
+  
+  .menu {
+    justify-content: space-around;
+  }
+  
+  .menu button {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .menu-right {
+    display: flex;
+    font-family: 'Manrope';
+    font-size: 8px;
+    align-items: center;
+  }
+  
+  .menu-right button {
+    width: 100px ;
+    height: 30px;
+    text-align: center;
+    flex-grow: 0;
+    color: #fff;
+    font-size: 14px;
+    background-color: #8C30F5;
+    display: inline-block;
+    margin:  0px 10px;
+    border-radius: 7px;
+    border-style: solid;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .menu-right button:hover{
+    transition: 0.3s;
+    background-color: #F1E4FF;
+    color: #8C30F5;
+  }
+  
+
+  
+  
+  .cadastroLivro {
+    align-items: flex-start;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:  100px;
+  }
+  
+  .banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+  }
+  
+  .banner img {
+    width: 90%;
+  }
+  .adicionarFoto {
+    align-items: flex-start;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:  100px;
+  }
+  
+  .texto2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    text-align:center;
+  }
+  .adicionarFoto button {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    flex-grow: 0;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    background-color: rgb(140, 48, 245);
+    display: inline-block;
+    margin: 0px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .imagem5 img {
+    width: 110%;
+  }
+  .cadastro {
+    margin-left: 60px;
+    display: flex;
+    width: 70%;
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .cadastro p {
+    margin-top: 0;
+    font-size: 45px;
+  }
+  
+  .cadastro form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cadastro form input {
+    color: #000;
+    text-align: left;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: bold;
+    padding: 15px;
+    width: 90%;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    border: 1px solid rgba(204,204,204);
+  }
+  
+  .concluir {
+    background-color: #0B0D17;
+  } 
+  
+ 
+  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0B0D17 ;
+    color: #fff;
+  }
+  
+  .footer-left {
+    width: 50%;
+  }
+  
+  footer li {
+    list-style: none;
+    font-size: 16px;
+    font-family: "Manrope";
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-left .l1-footer {
+    display: flex;
+  }
+  .footer-left img{
+    margin-bottom: 30px;
+    /* padding-left: 30px; */
+  }
+  
+  .footer-left .l1-footer li {
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-left .l2-footer {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .footer-left .l2-footer li {
+    padding-right: 20px;
+  }
+  
+  .footer-left p{
+    margin-left: 40px;
+    /* padding-left: 30px; */
+  }
