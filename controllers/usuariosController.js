@@ -29,6 +29,11 @@ const usuariosController = {
             
         })
         return res.json(novoUsuario)
+        
+    },
+
+    cadastro_usuario: async (req, res) => {
+        res.render('reg-user')
     },
 
     update: async (req, res) => {

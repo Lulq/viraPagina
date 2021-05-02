@@ -9,6 +9,11 @@ const ValidarModificacaoUsuario = require("../middlewares/ValidarModificacaoUsua
 router.get('/', usuariosController.index);
 router.post('/', ValidarCadastro, usuariosController.create);
 
+
+// rota para a view cadastrar usuário
+router.get('/cadastro', usuariosController.cadastro_usuario)
+
+
 router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
 router.delete('/:id', usuariosController.delete);
 
