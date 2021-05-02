@@ -260,6 +260,7 @@ button {
 
 .flex .add {
   display:  flex;
+  align-items: center;
 }
 
 .flex button {
