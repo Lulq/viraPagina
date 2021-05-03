@@ -7,6 +7,17 @@ body {
   margin: 0px;
 }
 
+a:link {
+  text-decoration:none;
+  }
+a:visited {
+  color: black;
+  text-decoration:none;
+  }
+a:hover {
+  text-decoration:none;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -259,6 +270,7 @@ button {
 }
 
 .flex .add {
+  align-items: center;
   display:  flex;
 }
 

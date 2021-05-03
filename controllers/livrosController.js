@@ -4,12 +4,13 @@ let uuid = uuidv4()
 
 
 const livrosController = {
+ 
     index: async ( req, res ) => {
         let livros = await Livro.findAll({
             include : ['usuario', 'idioma', 'autor', 'genero']
         })
        
-        return res.json(livros);
+        return res.render('livros', { livros } );
     },
 
     buscar: async ( req, res ) => {

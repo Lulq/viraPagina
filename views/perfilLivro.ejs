@@ -16,17 +16,16 @@
             <div class="header-left">
                 <div class="logo">
                     <img src="/img/logo-icon-black.png" alt="">
-                    <h2>ViraPágina</h2>
+                    <h2><a href="/">ViraPágina</a></h2>
                 </div>
-                <p>Sobre</p>
-                <p>Livros</p>
-                <p>Doações</p>
-                <p>Seus Dados</p>
+                <p><a href="/sobre">Sobre</a></p>
+                <p><a href="/livros">Livros</a></p>
+                <p>Perfil</p>
             </div>
             <div class="header-right" id="wfind">
                 <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
-                <button class="left">Login</button>
-                <button class="right">Criar Conta</button>
+                <button class="left" onclick="window.location.href='usuarios/login'">Login</button>
+                <button class="right" onclick="window.location.href='usuarios/cadastro'">Criar Conta</button>
             </div>
         </header>
         <section id="book-profile" class="top-content">

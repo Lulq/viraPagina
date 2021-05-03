@@ -4,6 +4,20 @@ const { v4: uuidv4 } = require('uuid');
 let uuid = uuidv4()
 
 const usuariosController = {
+
+    // Renderizar a home page
+    homePage : (req, res, next) => {
+        return res.render('index')
+    },
+
+    about: (req, res) => {
+        return res.render('sobre')
+    },
+
+    login: async(req, res, next) => {
+        return res.render('login')
+    },
+
     index: async (req, res) => {
         let usuarios = await Usuario.findAll(
             { include: ["livros", "endereco_usuario" ] }

@@ -13,6 +13,10 @@ router.post('/', ValidarCadastro, usuariosController.create);
 router.get('/cadastro', usuariosController.cadastro_usuario)
 
 
+// login
+router.get('/login', usuariosController.login)
+
+
 router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
 router.delete('/:id', usuariosController.delete);
 
