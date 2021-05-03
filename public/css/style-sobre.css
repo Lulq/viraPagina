@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Ropa+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope+Alternates&display=swap');
+
+
+:root{
+    --default-white: rgba(255, 255, 255, 1);
+    --default-purple: rgba(140,48,245,1);
+    --weak-purple: rgba(214, 177, 255, 1);
+    --pastel-blue: rgba(160, 220, 255, 1);
+    --pastel-green:rgba(193, 229, 192, 1);
+    --pastel-pink:rgba(255, 195, 216, 1);
+
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin:0px;
+     
+ /* Cabeçalho    */
+
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+header {
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    position:fixed;
+    z-index: 10;
+    top:0;
+    right:0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    
+}
+
+/* Header com campo de busca */
+
+header #wfind.header-right{
+    display: flex;
+    max-width:450px;
+    width:450px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #wfind.header-right input {
+    width: 300px;
+    margin: 10px 10px;
+    padding: 5px;
+}
+header #wfind.header-right button {
+    width: 150px;
+    margin-right: 15px;
+
+}
+/* ================= Fim do Header com Campo de busca =================== */
+
+.logo {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+    padding-right: 9px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-left p {
+    padding-left: 32px;
+}
+
+.header-right {
+    width: 212px;
+    display:flex;
+    justify-content: space-between;
+}
+
+button {
+    border:none;
+    border-radius:8px;
+    width: 100px;
+    height: 40px;
+    font-size:14px;
+    font-weight: 700;
+   
+}
+
+.header-right button.left {
+    background-color:rgba(241,228,255,1);
+    color: rgba(140,48,245,1);
+}
+
+.header-right button.right {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+/* Centro-superior */
+
+.top-content {
+    
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 130px;
+    
+}
+
+.top-left {
+    max-width: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    font-weight: 800;
+  
+}
+
+.top-right {
+    max-width: 10%;
+}
+
+.top-right form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.top-right input{
+    max-width: 30vw;
+    width: 510px;
+    margin-bottom: 10px;
+    padding: 18px 10px;
+}
+
+.top-right button {
+    background-color: rgba(140,48,245,1);
+    color: white;
+}
+
+
+/* ================== Centro Superior Perfil Livro =====================*/
+
+#book-profile.top-content{
+    align-items: flex-start;
+}
+
+.top-left img#book-img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#book-info.top-right {
+    display:flex;
+    flex-direction: column;
+    max-width:400px;
+    align-items: flex-start;
+    height: auto;
+   
+}
+#book-info.top-right h3 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.profile-photo img{
+    display:flex;
+    width: 60px;
+     
+}
+
+.profile-label {
+    display:flex;
+    align-items: center;
+    
+}
+.name-title {
+    display:flex; 
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.info h5 {
+    color: rgba(140, 48, 245, 1);
+    font-size:24px;
+}
+
+#book-actions.buttons {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: auto;
+}
+
+#book-actions.buttons button{
+    margin-bottom: 15px;
+    width: 200px;
+    background-color: rgba(214, 177, 255, 1);
+    color: rgba(140, 48, 245, 1);
+}
+
+/* ========================INDEX ========================= */
+
+/* top-content */
+
+#index.top-content {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#index.top-content .top-left {
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+#index.top-content .top-left h3 {
+    font-size:50px;
+    margin-bottom: 0px;
+
+}
+
+#index.top-content .top-left p {
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 25px;
+} 
+
+#index.top-content .top-left button {
+   background-color: rgba(140, 48, 245, 1);
+   color: rgba(255, 255, 255, 1);
+   width: 180px;
+   font-size: 16px;
+}
+
+
+#index.top-content .top-right{
+    max-width: 100%;
+}
+
+
+#index.top-content .top-right img{
+   max-width: 450px;
+}
+
+.container-sobre {
+    padding-right: -100px;
+    width: 150%;
+    margin-top: 30px;
+    text-align:justify;
+    color: white;
+    font-size: 30px;
+    background-color: var(--default-purple);
+    border-radius: 50px;
+}
+
+
+
+
+.container-sobre p {
+    padding: 20px;
+}
+
+
+/* ==================== FOOTER ======================= */
+
+footer {
+    
+    position:absolute;
+    
+    height: 280px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    padding-top: 56px;
+    background-color: rgba(11, 13, 23, 1);
+    color: white;
+    font-size: 15px;
+   
+    
+}
+
+footer .footer-left {
+    width: auto;
+    display:flex;
+    flex-direction: column;
+   
+    
+}
+
+footer .footer-left img {
+    width: 39px;
+    margin-bottom: 20px;
+}
+
+footer .footer-left .linha-1 {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+footer .footer-left .linha-2 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+footer .footer-left .linha-2 p {
+    padding-right: 15px;
+}
+
+footer .footer-left .linha-3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer .footer-right {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    left:-100px;
+    font-size: 17px;
+}
+
+.footer-right img {
+    width:135px;
+}
