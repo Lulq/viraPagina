@@ -282,7 +282,7 @@ button {
 
 .container-sobre {
     padding-right: -100px;
-    width: 150%;
+    width: 100%;
     margin-top: 30px;
     text-align:justify;
     color: white;
@@ -296,6 +296,7 @@ button {
 
 .container-sobre p {
     padding: 20px;
+    font-size: 18px !important;
 }
 
 
