@@ -6,6 +6,7 @@ body {
         margin: 0;
 }
 .modal-container{
+    top: 13%;
     position: absolute;
     color: white;
     background-color: #F39F9F ;
@@ -30,7 +31,8 @@ body {
 
 .foto1 {
     display: flex;
-    top: -90px;
+    top: 0px;
+    height: 30%;
     position: relative;
 }
 
