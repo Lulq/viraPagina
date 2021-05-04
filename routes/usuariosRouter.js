@@ -3,10 +3,12 @@ const router = express.Router();
 const usuariosController = require('../controllers/usuariosController');
 const ValidarCadastro = require("../middlewares/ValidarCadastro")
 const ValidarModificacaoUsuario = require("../middlewares/ValidarModificacaoUsuario")
+const loginAuthenticate = require("../middlewares/loginAuthenticate")
 
 
 /* GET - Lista todos os usuários */
 router.get('/', usuariosController.index);
+
 router.post('/', ValidarCadastro, usuariosController.create);
 
 
@@ -14,7 +16,15 @@ router.post('/', ValidarCadastro, usuariosController.create);
 router.get('/cadastro', usuariosController.cadastro_usuario)
 
 
-router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
+// login
+router.get('/login', usuariosController.login)
+router.post('/login', usuariosController.auth)
+
+// renderizar a view perfil do usuário
+router.get('/perfil', loginAuthenticate, usuariosController.user)
+
+router.put('/:id', usuariosController.update);
+
 router.delete('/:id', usuariosController.delete);
 
 

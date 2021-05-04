@@ -2,9 +2,55 @@
 const { Usuario, sequelize } = require('../models');
 const bcrypt = require('bcryptjs')
 const { v4: uuidv4 } = require('uuid');
+const { response } = require('express');
 let uuid = uuidv4()
 
 const usuariosController = {
+
+    // Renderizar a home page
+    homePage : (req, res, next) => {
+        return res.render('index')
+    },
+
+    about: (req, res) => {
+        return res.render('sobre')
+    },
+
+    login: async(req, res, next) => {
+        return res.render('login')
+    },
+
+    //session logado
+
+    auth: async (req, res) => {
+        const { login, senha} = req.body
+        const user = await Usuario.findOne({
+            where: { login }
+        })
+        if (user && bcrypt.compareSync(senha, user.senha)){
+            req.session.usuarioLogado = user
+            return res.redirect('/')
+
+        }else {
+            console.log('login falhou')
+            return res.redirect('/usuarios/login')
+        }
+    },
+
+    user: async ( req, res ) => {
+        const { id } = req.session.usuarioLogado // mudei de req params pra session usuarioLogado
+        let usuario = await Usuario.findOne(
+            {
+                include : ['endereco_usuario', 'livros'],
+                where: { id }  
+            })
+
+        console.log(`Este é o ID recebido do url: ${id}`)
+        console.log(JSON.stringify(usuario, null, 2))
+        
+        return res.render('perfil',{ usuario });  // renderiza a view que queremos, passando o objeto livro
+    },
+
     index: async (req, res) => {
         let usuarios = await Usuario.findAll(
             { include: ["livros", "endereco_usuario" ] }
@@ -20,15 +66,12 @@ const usuariosController = {
         let novoUsuario = await Usuario.create({
             id : uuid,
             nome,
-            cpf,
             telefone,
             login,
             senha: senhaCrypt,
-            livros_favoritos,
-            imagem
-            
         })
-        return res.json(novoUsuario)
+        // return res.json(novoUsuario)
+        return res.render('login', {novoUsuario})
         
     },
 

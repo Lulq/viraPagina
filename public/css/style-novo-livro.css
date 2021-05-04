@@ -7,17 +7,6 @@ body {
   margin: 0px;
 }
 
-a:link {
-  text-decoration:none;
-  }
-a:visited {
-  color: black;
-  text-decoration:none;
-  }
-a:hover {
-  text-decoration:none;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -186,8 +175,9 @@ button {
 }
 
 .banner img {
-  width: 70%;
+  width: 100%;
 }
+
 
 
 .login {
@@ -222,91 +212,49 @@ button {
 }
 
 
-
-.flex {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #0B0D17;
-  display: flex;
-  flex-wrap: wrap;  
-  /* padding: 10px; */
-}
-
-.flex .titulo {
-  font-family: "Manrope";
-  color: #fff;
-  font-size: 40px;
-}
-
-.flex .linha {
-  display: flex;
-}
-
-.flex article {
-  width: 350px;
-  height: 258px;
-  border-radius: 8px;
-  padding: 40px;
-
-}
-
-
-.flex .linha {
-  display: flex;
-  /* justify-content: space-around; */
-}
-
-
-.flex .thumbs {
-  font-family: "Manrope";
-  color: #0B0D17;
-  margin: 10px;
-  border-radius: 8px;
-  margin: 10px;
-  background-color: #fff;
-  /* margin: 10px; */
-}
-
-.flex .add {
-  align-items: center;
-  display:  flex;
-}
-
-.flex button {
-  background-color: transparent;
-  border: none;
-  color:#8C30F5;
-  font-family: "Manrope";
-  font-size: 12px;
-}
-
-.flex article {
+.banner-login2 {
   align-items: flex-start;
+  margin-top: 150px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 300px;
+  justify-content: space-around;
+  margin-bottom:  100px;
 }
 
-.seta {
-  color:  #8C30F5;
+.celular {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -100px;
 }
 
-.concluir {
-  background-color: #0B0D17;
+.add-foto h3 {
+  font-size: 34px;
 }
 
-.concluir button {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  font-size: 20px;
-  width: 150px;
-  height: 50px;
-  border: none;
-  background-color: #fff;
-  color: #8C30F5;
+.add-foto p {
+  font-size: 14px;
+}
+
+.btn-add {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-left button {
+  width: 160px;
+  height: 45px;
+  font-size: 14px;
+  background-color: #d9dbe1;
+  color: white;
+}
+
+.add-right button {
+  width: 160px;
+  height: 45px;
+  font-size: 14px;
+  background-color: rgba(140,48,245,1);
+  color: white;
 }
 
 

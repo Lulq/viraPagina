@@ -18,14 +18,13 @@
                     <img src="img/logo-preto.png" alt="">
                     <h2>ViraPágina</h2>
                 </div>
-                <p>Sobre</p>
-                <p>Livros</p>
-                <p>Doações</p>
-                <p>Seus Dados</p>
+                <p><a href="/sobre">Sobre</a></p>
+                <p><a href="/livros">Livros</a></p>
+                <p><a href="/usuarios/perfil">Perfil</a></p>
             </div>
             <div class="header-right">
-                <button class="left">Login</button>
-                <button class="right">Criar Conta</button>
+                <button class="left" onclick="window.location.href='usuarios/login'">Login</button>
+                <button class="right" onclick="window.location.href='usuarios/cadastro'">Criar Conta</button>
             </div>
         </header>
         <section id=index class="top-content">
@@ -34,7 +33,7 @@
                 <p>ViraPágina é a sua plataforma para a troca de livros. Tenha acesso a um acervo de milhares de livros
                 </p>
                 <div class="container">
-                    <button>Vire a página!</button>
+                    <button onclick="window.location.href='/usuarios/login'">Vire a página!</button>
                 </div>
             </div>
             <div class="top-right">
@@ -176,8 +175,9 @@
         </div>
 
     </footer>
-
-
+  
 </body>
+
+<script src="js/main.js" ></script>
 
 </html>

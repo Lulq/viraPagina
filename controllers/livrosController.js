@@ -1,15 +1,25 @@
-const { Livro , sequelize } = require('../models')
+const { Livro , Autor, Idioma, Genero, sequelize } = require('../models')
 const { v4 : uuidv4 } = require('uuid')
 let uuid = uuidv4()
 
 
 const livrosController = {
+ 
     index: async ( req, res ) => {
         let livros = await Livro.findAll({
             include : ['usuario', 'idioma', 'autor', 'genero']
         })
        
-        return res.json(livros);
+        return res.render('livros', { livros });
+    },
+
+    addBook : async (req, res) => {
+
+        const autores = await Autor.findAll()
+        const generos = await Genero.findAll()
+        const idiomas = await Idioma.findAll()
+        console.log(autores)
+        return res.render('novo-livro', {autores, generos, idiomas})
     },
 
     buscar: async ( req, res ) => {
@@ -60,7 +70,8 @@ const livrosController = {
             autor_id, 
             genero_id
         })
-        return res.json(novoLivro)
+
+        return res.render('index', novoLivro)
     },
     update: async (req, res) => {
         let novaInfo = req.body

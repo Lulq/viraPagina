@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Usuário</title>
+    <link rel="stylesheet" href="/css/style-perfil.css">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <img src="/img/Vector.png" alt="">
+                    <h2><a href="/">ViraPágina</a></h2>
+                </div>
+                <p><a href="/sobre">Sobre</a></p>
+                <p><a href="/livros">Livros</a></p>
+                <p>Perfil</p>
+            </div>
+            <div class="header-right" id="wfind">
+                <input class="text" type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
+                <button class="left" onclick="window.location.href='/usuarios/login'">Login</button>
+                <button class="right" onclick="window.location.href='/usuarios/cadastro'">Criar Conta</button>
+            </div>
+        </header>
+        
+        </section>
+        
+        
+        <section id="book-profile" class="top-content">
+            <div class="top-left">
+                <img class="profile-pic" id="book-img" src="<%=usuario.imagem%>" alt="">
+
+            </div>
+            <div id="book-info" class="top-right">
+
+
+                <h2> <strong> <%=usuario.nome%> </strong> </h2>
+                <h4><%=usuario.livros_favoritos%></h4>
+                <h5><%=usuario.endereco_usuario[0].cidade%>, <%=usuario.endereco_usuario[0].estado%></h5>
+            <div id="book-actions" class="buttons">
+                 <button type="submit"><a href="/livros/novo/livro">Adicionar Livros</a></button>
+
+            </div>
+
+            </div>
+        </section>
+      </br>
+    </br>
+  </br>
+</br>
+
+
+        <div class="texto">
+          <p> <strong>Compartilhe seus Livros</strong> </p>
+        </div>
+
+        <div class="sub-texto">
+
+        <div class="top">
+          <div class="img1"><img src="img/v1.png" alt=""></div>
+          
+          <div class="img2"><img src="img/v2.png" alt=""></div>
+          
+          <div class="img3"><img src="img/v3.png" alt=""></div>
+        </div>
+        
+    </div>
+
+    <div class="texto-bottom">
+        <div class="texto1">
+            <div><strong>Troca</strong></div>
+            <div>Troque seus livros com milhares de leitores</div>
+            <div class="acao">Troque Agora →</div>
+        </div>
+
+        <div class="texto2">
+            <div><strong>Venda</strong></div>
+            <div>Venda seus livros e faça uma renda extra</div>
+            <div class="acao">Venda Agora →</div>
+        </div>
+
+        <div class="texto3">
+            <div><strong>Doações</strong></div>
+            <div>Doe seus livros para instituições parceiras</div>
+            <div class="acao">Doe Agora →</div>
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        <div class="footer-left">
+            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <div class="linha-1">
+                <p>Baixe agora</p>
+                <p>Licensa</p>
+            </div>
+            <div class="linha-2">
+                <p>Sobre</p>
+                <p>Funcionalidades</p>
+                <p>Doações</p>
+                <p>Carreiras</p>
+                <p>Ajuda</p>
+                <p>Política de Privacidade</p>
+
+            </div>
+            <div class="linha-3">
+                <p>© 2021 Todos os direitos reservados</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Baixe o App</p>
+            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" alt="">
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

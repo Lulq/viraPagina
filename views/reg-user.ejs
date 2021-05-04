@@ -14,16 +14,15 @@
         <div class="header-left">
             <div class="logo">
                 <img src="/img/Vector.png" alt="">
-                <h2>ViraPágina</h2>
+                <h2><a href="/">ViraPágina</a></h2>
             </div>
-            <p>Sobre</p>
-            <p>Livros</p>
-            <p>Doações</p>
-            <p>Seus Dados</p>
+            <p><a href="/sobre">Sobre</a></p>
+            <p><a href="/livros">Livros</a></p>
+            <p>Perfil</p>
         </div>
         <div class="header-right" id="wfind">
             <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
-            <button class="left">Login</button>
+            <button class="left" onclick="window.location.href='/usuarios/login'">Login</button>
             <button class="right">Criar Conta</button>
         </div>
     </header>
@@ -39,12 +38,15 @@
 
             <div class="login">
                 <p><strong>Cadastre seus dados <br> para poder usufruir do <br> site</strong> </p>
-                <form>
+                <form action='/usuarios' method="POST">
+
                     <input type="nome" name="nome" id="nome" placeholder="Nome">
-                    <input type="nascimento" name="nascimento" id="nascimento" placeholder="Data de Nascimento">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="telefone" name="telefone" id="telefone" placeholder="Telefone(Whatsapp)">
+                    <input type="login" name="login" id="email" placeholder="E-mail">
                     <input type="password" name="senha" id="senha" placeholder="Senha">
                     <input type="password" name="senhaconfirma" id="senhaconfrima" placeholder="Confirmar senha">
+
+                    <button type="submit">Cadastrar</button>
                 </form>
             </div>
         </div>

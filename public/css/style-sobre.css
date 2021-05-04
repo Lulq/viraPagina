@@ -31,6 +31,8 @@ a:link {
     text-decoration:none;
   }
 
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -204,7 +206,6 @@ button {
 .profile-photo img{
     display:flex;
     width: 60px;
-    border-radius: 50%;
      
 }
 
@@ -290,229 +291,30 @@ button {
    max-width: 450px;
 }
 
-/* ===================== Depoimentos ===================== */
-
-.testimonials{
-    background-color: rgba(140, 48, 245, 1);
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 70px;
-    
-}
-
-.testimonials .headline {
-    width:80%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 25px;
-    color:rgba(255, 255, 255, 1);
-}
-
-.testimonials .headline img {
-    position:relative;
-    opacity: 30%;
+.container-sobre {
+    padding-right: -100px;
+    width: 100%;
     margin-top: 30px;
+    text-align:justify;
+    color: whitesmoke;
+    font-size: 30px;
+    background-color: rgba(214, 177, 255, 1) ;
+    border-radius: 3px;
 }
 
-.testimonials .container {
-    display: flex;
-    position:relative;
-    top:-20px;
-    
-}
-
-.testimonials .container article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width:600px;
-    
-}
-
-article .trianguim {
-    position: relative;
-    width:20px;
-    top:-40px;
-    z-index:1;
- 
+.container-sobre strong:hover {
+    font-size:130%;
+    color:rgb(214, 79, 214);
+    font-weight: 800;
 }
 
 
 
-article .container {
-    
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    /* left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 27.63%; */
-    padding:20px;
-    margin:20px;
-    height:200px;
-    background: #d8d6d6;
-    border-radius: 10px;
 
+.container-sobre p {
+    padding: 20px;
+    font-size: 18px !important;
 }
-
-article .profile-label {
-    position:relative;
-    color: var(--default-white);
-    top:-20px;
-}
-
-
-/* ==================  Meio Geral  =====================   */
-
-
-.middle-content .middle-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.middle-content .main-image {
-
-    max-width: 900px;   /*melhorar*/
-    margin-bottom: 80px;
-}
-
-.middle-content h2 {
-    width: 500px;
-    font-size: 48px;
-    font-weight: 700;
-   
-    text-align: center;
-    
-}
-
-.middle-bottom {
-    display:flex;
-    max-width: 100%;
-    justify-content: space-between;
-    padding-bottom: 150px;
-    position:relative;
-    left:140px;
-    
-}
-
-.middle-bottom-left {
-
-    display:flex;
-    flex-direction: column;
-    position:relative;
-    max-width: 50%;;
-    left:10px;
-}
-
-.middle-bottom-right{
-    position:relative;
-    right:70px;
-    justify-content:flex-end;
-    max-width: 50%;
-    padding:100px;
-}
-.middle-bottom-right h5 {
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.middle-bottom-right p {
-    font-size: 14px;
-    font-weight: 400;   /*não funciona*/
-    line-height: 32px;
-}
-
-.il-1::marker {
-    color:rgba(160, 220, 255, 1);
-}
-.il-2::marker {
-    color:rgba(255, 195, 216, 1);
-}
-.il-3::marker {
-    color:rgba(193, 229, 192, 1);
-}
-
-
-/* --------mosaico de imagens e pontos----------- */
-
-.middle-bottom-left .circle {
-    width:80px;
-
-}
-
-.lim-1 {
-    position:absolute;
-    z-index:1;
-}
-.lim-1 .tile {
-    position:relative;
-    max-width:288px;
-    z-index: 6;
-    right:20px;
-}
-
-.lim-1 .circle {
-    position:absolute;
-    z-index: 5;
-    top: 175px;
-    left:220px;
-   
-}
-
-.lim-2 {
-    position:absolute;
-    top: 135px;
-    right:-120px;
-}
-
-
-.lim-2 .tile {
-    position:relative;
-    max-width:288px;
-    z-index:4;
-}
-
-.lim-2 .circle{
-    position:relative;
-    z-index:3;
-    top:220px;
-    left:-30px;
-}
-
-.lim-3 {
-    position:absolute;
-    top:380px;
-    left:10px;
-}
-
-
-.lim-3 .tile{
-    position:relative;
-    max-width:186px;
-    z-index: 8;
-    
-}
-.lim-3 .circle{
-    position:relative;
-    z-index: 1;
-    left:145px;
-    top:-45px;
-}
-
-
-/* ==================== MEIO INDEX ====================== */
-#index.middle-content{
-    width:73%;
-}
-
 
 
 /* ==================== FOOTER ======================= */

@@ -4,6 +4,7 @@ const livrosController = require('../controllers/livrosController')
 const ValidarLivro = require('../middlewares/ValidarLivro')
 const ValidarModificacaoLivro = require('../middlewares/ValidarModificacaoLivro')
 
+
 router.get('/', livrosController.index)
 
 //renderiza a view buscar livros
@@ -21,6 +22,8 @@ router.get('/:id', livrosController.livro)  // buscar um livro específico
 // modal de ir pro whatsapp
 router.get('/go/wpp', livrosController.gowpp)
 
+// renderizar a view de adicionar livro
+router.get('/novo/livro', livrosController.addBook)
 
 router.post('/', ValidarLivro, livrosController.create)
 router.put('/:id', ValidarModificacaoLivro, livrosController.update)
