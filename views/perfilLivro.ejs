@@ -20,7 +20,7 @@
                 </div>
                 <p><a href="/sobre">Sobre</a></p>
                 <p><a href="/livros">Livros</a></p>
-                <p>Perfil</p>
+                <p><a href="/usuarios/perfil">Perfil</a></p>
             </div>
             <div class="header-right" id="wfind">
                 <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
@@ -66,9 +66,10 @@
                      
 
                     <div class="whatsaap">
-                        <a href="https://api.whatsapp.com/send?phone=+*5581989366459*&text=%20*Boa tarde*">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=+*<%=livro.usuario.telefone%>*&text=%20Boa tarde <%=livro.usuario.nome%> vi seu livro *<%=livro.titulo%>* no *ViraPágina*, vamos trocar?" >
                             <button type="submit">Conversar com Leitor</button>
                         </a>
+
                         
                     </div>
 

@@ -22,7 +22,7 @@ router.post('/login', usuariosController.auth)
 // renderizar a view perfil do usuário
 router.get('/perfil', loginAuthenticate, usuariosController.user)
 
-router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
+router.put('/:id', usuariosController.update);
 
 router.delete('/:id', usuariosController.delete);
 
