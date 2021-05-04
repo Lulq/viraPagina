@@ -1,4 +1,4 @@
-const { Livro , sequelize } = require('../models')
+const { Livro , Autor, sequelize } = require('../models')
 const { v4 : uuidv4 } = require('uuid')
 let uuid = uuidv4()
 
@@ -13,8 +13,11 @@ const livrosController = {
         return res.render('livros', { livros });
     },
 
-    addBook : (req, res) => {
-        return res.render('novo-livro')
+    addBook : async (req, res) => {
+
+        const autores = await Autor.findAll();
+        console.log(autores)
+        return res.render('novo-livro', {autores})
     },
 
     buscar: async ( req, res ) => {

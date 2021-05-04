@@ -41,10 +41,19 @@
                 <form action="/livros" method="POST">
                     <input type="text" name="ISBN" id="livros" placeholder="ISBN">
                     <input type="text" name="titulo" id="livros" placeholder="Título da Obra" required>
-                    <!-- <input type="text" name="autor" id="autor" placeholder="Autor"> -->
+                    
+                    <input type="text" name="autor" id="autor" placeholder="Autor">
+
                     <input type="text" name="editora" id="editora" placeholder="Editora">
                     <input type="text" name="conservacao" id="livros" placeholder="Estado de Preservação">
-                                       
+                     <select name="autor_id" id="autor_id">
+                     <option selected disabled>Selecione uma opção</option>
+                    <% for (let autor of autores) { %>
+                      <option value="<%=autor.id%>"><%=autor.autor%> </option>
+                    
+                    <%}%>  
+                    </select>                                            
+
                     <input type="text" name="ano" id="ano" placeholder="Ano de Publicação">
                     <button type="submit">Adicionar</button>
                 </form>

@@ -40,9 +40,9 @@
             <div class="header">
                 <h2><strong>Faça seu login para usufruir do site</strong></h2>
             </div>
-            <form action="" class="form">
-                <input type="text" class="email" id="email" placeholder="Email">
-                <input type="password" class="password" id="password" placeholder="Senha">
+            <form action="/usuarios/login" class="form" method="POST">
+                <input type="text" class="login" name="login" placeholder="E-mail">
+                <input type="password" class="senha" id="password" name="senha" placeholder="Senha">
                 <!-- <div class="google">
                     <P>Faça login com sua conta Google</P>
                     <img src="/img/google-logo-1.png" alt="">
@@ -51,7 +51,7 @@
                     
                     <!-- <button class="cadastrar" id="button" href='/usuarios/cadastro'>Faça seu cadastro</button> -->
                     <a  class="link-cadastrar" href="/usuarios/cadastro">Faça seu cadastro</a>
-                    <a href="/usuarios/cadastro">Começar → </a>
+                    <button type="submit" > Começar → </button>
                 </div>
             </form>
         </div>

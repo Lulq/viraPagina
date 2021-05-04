@@ -1,6 +1,7 @@
 const { Usuario, sequelize } = require('../models');
 const bcrypt = require('bcryptjs')
 const { v4: uuidv4 } = require('uuid');
+const { response } = require('express');
 let uuid = uuidv4()
 
 const usuariosController = {
@@ -18,8 +19,25 @@ const usuariosController = {
         return res.render('login')
     },
 
+    //session logado
+
+    auth: async (req, res) => {
+        const { login, senha} = req.body
+        const user = await Usuario.findOne({
+            where: { login }
+        })
+        if (user && bcrypt.compareSync(senha, user.senha)){
+            req.session.usuarioLogado = user
+            return res.redirect('/')
+
+        }else {
+            console.log('login falhou')
+            return res.redirect('/usuarios/login')
+        }
+    },
+
     user: async ( req, res ) => {
-        const { id } = req.params
+        const { id } = req.session.usuarioLogado // mudei de req params pra session usuarioLogado
         let usuario = await Usuario.findOne(
             {
                 include : ['endereco_usuario', 'livros'],
