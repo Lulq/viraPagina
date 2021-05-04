@@ -7,5 +7,4 @@ router.post('/', idiomasController.create)
 router.put('/:id', idiomasController.update)
 router.delete('/:id', idiomasController.delete)
 
-
 module.exports = router

@@ -18,6 +18,20 @@ const usuariosController = {
         return res.render('login')
     },
 
+    user: async ( req, res ) => {
+        const { id } = req.params
+        let usuario = await Usuario.findOne(
+            {
+                include : ['endereco_usuario', 'livros'],
+                where: { id }  
+            })
+
+        console.log(`Este é o ID recebido do url: ${id}`)
+        console.log(JSON.stringify(usuario, null, 2))
+        
+        return res.render('perfil',{ usuario });  // renderiza a view que queremos, passando o objeto livro
+    },
+
     index: async (req, res) => {
         let usuarios = await Usuario.findAll(
             { include: ["livros", "endereco_usuario" ] }
@@ -33,15 +47,12 @@ const usuariosController = {
         let novoUsuario = await Usuario.create({
             id : uuid,
             nome,
-            cpf,
             telefone,
             login,
             senha: senhaCrypt,
-            livros_favoritos,
-            imagem
-            
         })
-        return res.json(novoUsuario)
+        // return res.json(novoUsuario)
+        return res.render('login', {novoUsuario})
         
     },
 

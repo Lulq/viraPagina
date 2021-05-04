@@ -10,7 +10,11 @@ const livrosController = {
             include : ['usuario', 'idioma', 'autor', 'genero']
         })
        
-        return res.render('livros', { livros } );
+        return res.render('livros', { livros });
+    },
+
+    addBook : (req, res) => {
+        return res.render('novo-livro')
     },
 
     buscar: async ( req, res ) => {
@@ -61,7 +65,8 @@ const livrosController = {
             autor_id, 
             genero_id
         })
-        return res.json(novoLivro)
+
+        return res.render('index', novoLivro)
     },
     update: async (req, res) => {
         let novaInfo = req.body

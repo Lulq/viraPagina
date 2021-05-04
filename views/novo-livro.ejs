@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Livros</title>
+    <link rel="stylesheet" href="/css/style-novo-livro.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="/img/Vector.png" alt="">
+                <h2>ViraPágina</h2>
+            </div>
+            <p>Sobre</p>
+            <p>Livros</p>
+            <p>Perfil</p>
+        </div>
+        <div class="header-right" id="wfind">
+            <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
+            <button class="left">Buscar</button>
+        </div>
+    </header>
+    
+    </section>
+    
+
+    <main>
+        <div class="banner-login">
+
+            <div class="banner">
+                <img src="/img/imageprincipal.png" alt="Instagram" class="logo">
+            </div>
+
+            <div class="login">
+                <p><strong>Coloque as<br> informações do <br> seu livro</strong> </p>
+                <form action="/livros" method="POST">
+                    <input type="text" name="ISBN" id="livros" placeholder="ISBN">
+                    <input type="text" name="titulo" id="livros" placeholder="Título da Obra" required>
+                    <!-- <input type="text" name="autor" id="autor" placeholder="Autor"> -->
+                    <input type="text" name="editora" id="editora" placeholder="Editora">
+                    <input type="text" name="conservacao" id="livros" placeholder="Estado de Preservação">
+                                       
+                    <input type="text" name="ano" id="ano" placeholder="Ano de Publicação">
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="banner-login2">
+
+            <div class="celular">
+                <img src="/img/celular.png" alt="celular" class="logo">
+            </div>
+
+            <div class="add-foto">
+                <h3><strong>Adicione fotos do seus livros </strong> </h3>
+                <p>Livros com fotos têm mais chance de serem <br> escolhidos. Capture a essência do conhecimento que você quer trocar!</p>
+
+                <div class="btn-add">
+
+                <div class="add-left">
+                    <button>Pular</button>
+                </div>
+
+                <div class="add-right">
+                    <button>Adicione Fotos</button>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <div class="linha-1">
+                <p>Baixe agora</p>
+                <p>Licensa</p>
+            </div>
+            <div class="linha-2">
+                <p>Sobre</p>
+                <p>Funcionalidades</p>
+                <p>Doações</p>
+                <p>Carreiras</p>
+                <p>Ajuda</p>
+                <p>Política de Privacidade</p>
+
+            </div>
+            <div class="linha-3">
+                <p>© 2021 Todos os direitos reservados</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Baixe o App</p>
+            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" alt="">
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

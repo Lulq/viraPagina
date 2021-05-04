@@ -27,6 +27,7 @@ const enderecosController = {
                 where: {id : req.params.id}
             }
         )
+        console.log(editarEndereco)
         return res.json(editarEndereco)
     },
     

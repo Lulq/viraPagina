@@ -16,8 +16,11 @@ router.get('/cadastro', usuariosController.cadastro_usuario)
 // login
 router.get('/login', usuariosController.login)
 
+// renderizar a view perfil do usuário
+router.get('/:id', usuariosController.user)
 
 router.put('/:id', ValidarModificacaoUsuario, usuariosController.update);
+
 router.delete('/:id', usuariosController.delete);
 
 module.exports = router;

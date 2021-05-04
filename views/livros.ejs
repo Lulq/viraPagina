@@ -34,7 +34,20 @@
     <section class="category" id="category">
         <h1 class="heading"> <i class="fas fa-book"></i> Livros Disponíveis <i class="fas fa-book"></i></h1>
         <div class="box-container">
+
+            <% for (let livro of livros) { %> 
+
             <div class="box">
+                <img src=<%=livro.imagem %> alt="">
+                <h2><%=livro.titulo%></h2>
+                <h3><%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %> </h3>
+                <a href="/livros/<%=livro.id%>" class="btn"><strong>Saiba Mais</strong></a>
+            </div>
+
+
+            <% } %>
+
+            <!-- <div class="box">
                 <img src="/img/image (1).jpg" alt="">
                 <h2>Terras do sem fim</h2>
                 <h3>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.</h3>
@@ -172,7 +185,7 @@
                 <h2>Tieta do Agreste</h2>
                 <h3>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.</h3>
                 <a href="#" class="btn"><strong>Saiba Mais</strong></a>
-            </div>
+            </div> -->
 
         </div>
     </section>

@@ -3,7 +3,8 @@ const { Idioma, sequelize } = require('../models')
 const idiomasController = {
     index: async (req, res) => {
         let idiomas = await Idioma.findAll();
-        return res.json(idiomas);
+
+        return res({ idiomas : idiomas});
     },
 
     create: async (req, res) => {
