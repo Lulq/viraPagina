@@ -241,6 +241,10 @@ button {
   padding-top: 30px;
   font-size: 12px;
 }
+.logout a {
+  color: blueviolet;
+  font-weight: 800;
+}
  
 .texto-bottom {
   display: flex;

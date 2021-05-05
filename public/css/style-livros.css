@@ -240,7 +240,16 @@ button {
   align-items: flex-end;
 }
 
+.remove {
+  font-family: 'Montserrat';
+  background-color: white;
+  width: 100%;
+  font-size: 12px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 .remove strong{
+  
   color: blueviolet;
  
 }
