@@ -381,3 +381,8 @@ footer .footer-right {
 .footer-right img {
     width:135px;
 }
+
+.linha-2 a {
+    color: white;
+    text-decoration: none;
+}
