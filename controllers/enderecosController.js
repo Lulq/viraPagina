@@ -26,7 +26,7 @@ const enderecosController = {
             // cep
         })
         
-        return res.render('login-first')
+        return res.redirect('/usuarios/login?acao=cadastro-usuario-sucesso');
 
     },
     

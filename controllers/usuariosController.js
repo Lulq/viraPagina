@@ -15,7 +15,15 @@ const usuariosController = {
     },
 
     login: async(req, res, next) => {
-        return res.render('login')
+
+        const {acao} = req.query;
+
+        let mensagem = "";
+
+        if (acao == "cadastro-usuario-sucesso"){
+            mensagem = "Tudo certo, sua conta foi criada!";
+        }
+        return res.render('login', {mensagem})
     },
 
     //session logado
@@ -27,7 +35,7 @@ const usuariosController = {
         })
         if (user && bcrypt.compareSync(senha, user.senha)){
             req.session.usuarioLogado = user
-            return res.redirect('/')
+            return res.redirect('/usuarios/perfil')
 
         }else {
             console.log('login falhou')

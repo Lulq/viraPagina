@@ -38,6 +38,9 @@
         </div>
         <div class="right">
             <div class="header">
+                <% if(typeof mensagem !== "undefined") { %>
+                    <h5 class="confirmation-message"> <%= mensagem %> </h5>
+                <% } %>
                 <h2><strong>Faça seu login para usufruir do site</strong></h2>
             </div>
             <form action="/usuarios/login" class="form" method="POST">
