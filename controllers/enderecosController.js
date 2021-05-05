@@ -1,21 +1,29 @@
 const { Endereco_usuario, sequelize } = require('../models')
 
 const enderecosController = {
+    // view adicionar endereço
+    cadastro_endereco: async (req, res) => {
+        res.render('reg-user-endereco')
+    },
+
     index: async (req, res) => {
         let enderecos = await Endereco_usuario.findAll();
         return res.json(enderecos);
     },
 
+
     create: async (req, res) => {
-        let { rua, numero, complemento, bairro, cidade, estado, cep } = req.body;
+        let { id } = req.session.usuarioLogado
+        let { rua, numero, complemento, bairro, cidade, estado, usuario_id, cep } = req.body;
         let novoEndereco = await Endereco_usuario.create({
-            rua, 
-            numero,
-            complemento, 
+            // rua, 
+            // numero,
+            // complemento, 
             bairro, 
             cidade, 
-            estado, 
-            cep
+            estado,
+            usuario_id : id  
+            // cep
         })
         return res.json(novoEndereco)
     },

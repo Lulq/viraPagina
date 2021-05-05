@@ -40,7 +40,9 @@
             <h2><%=livro.titulo%></h2>
             <h3><%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %> </h3>
             <a href="/livros/<%=livro.id%>" class="btn"><strong>Info</strong></a>
-            <a href="/livros/<%=livro.id%>" class="remove"><strong>Remover Livro</strong></a>
+            
+            
+            <a href="/livros/seus_livros" action="/livros/<%=livro.id%>" method="DELETE" class="remove"><strong>Remover Livro</strong></a>
           </div>
 
         <%}%>

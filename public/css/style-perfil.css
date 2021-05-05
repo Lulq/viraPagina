@@ -234,6 +234,14 @@ button {
   
 }
 
+.logout {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 30px;
+  font-size: 12px;
+}
+ 
 .texto-bottom {
   display: flex;
 }

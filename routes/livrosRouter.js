@@ -27,6 +27,7 @@ router.get('/novo/livro', livrosController.addBook)
 
 router.post('/', ValidarLivro, livrosController.create)
 router.put('/:id', ValidarModificacaoLivro, livrosController.update)
+
 router.delete('/:id', livrosController.delete)
 
 

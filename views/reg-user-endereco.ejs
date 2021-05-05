@@ -37,16 +37,13 @@
             </div>
 
             <div class="login">
-                <p><strong>Cadastre seus dados <br> para poder usufruir do <br> site</strong> </p>
-                <form action='/usuarios' method="POST">
+                <p><strong>Informe sua localização</strong> </p>
+                <form action='/enderecos' method="POST">
 
-                    <input type="nome" name="nome" id="nome" placeholder="Nome">
-                    <input type="telefone" name="telefone" id="telefone" placeholder="Telefone(Whatsapp)">
-                    <input type="login" name="login" id="email" placeholder="E-mail">
-                    <input type="password" name="senha" id="senha" placeholder="Senha">
-                    <input type="password" name="senhaconfirma" id="senhaconfrima" placeholder="Confirmar senha">
-
-                    <button type="submit">Próximo</button>
+                    <input type="cidade" name="cidade" id="cidade" placeholder="Cidade">
+                    <input type="estado" name="estado" id="estado" placeholder="Estado">
+                    <input type="bairro" name="bairro" id="bairro" placeholder="Bairro">
+                    <button type="submit">Cadastrar</button>
                 </form>
             </div>
         </div>
