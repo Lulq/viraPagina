@@ -90,12 +90,13 @@ const livrosController = {
         })
         return res.json(alterarLivro)
     },
+    
     delete: async (req, res) => {
-        let { id } = req.params
+        let { idlivro } = req.body
         let deletarLivro = await Livro.destroy({
-            where: { id }
+            where: { id : idlivro  }
         })
-        return res.json(deletarLivro)
+        return res.redirect('/livros/seus_livros')
     }
 }
 

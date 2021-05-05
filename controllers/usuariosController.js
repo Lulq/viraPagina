@@ -73,9 +73,12 @@ const usuariosController = {
             telefone,
             login,
             senha: senhaCrypt,
-        })
+        }) 
+
+        req.body.usuarioid = JSON.stringify({idusuario : novoUsuario.id})
+        console.log(`Id Novo do controller USUARIO: ${novoUsuario.id}`)
         // return res.json(novoUsuario)
-        return res.render('login', {novoUsuario})
+        return res.render('reg-user-endereco', {novoUsuario})
         
     },
 

@@ -1,5 +1,6 @@
 const { Endereco_usuario, sequelize } = require('../models')
 
+
 const enderecosController = {
     // view adicionar endereço
     cadastro_endereco: async (req, res) => {
@@ -13,7 +14,6 @@ const enderecosController = {
 
 
     create: async (req, res) => {
-        let { id } = req.session.usuarioLogado
         let { rua, numero, complemento, bairro, cidade, estado, usuario_id, cep } = req.body;
         let novoEndereco = await Endereco_usuario.create({
             // rua, 
@@ -22,9 +22,10 @@ const enderecosController = {
             bairro, 
             cidade, 
             estado,
-            usuario_id : id  
+            usuario_id  //COMO PEGAR O ID DO NOVO USUARIO
             // cep
         })
+        
         return res.json(novoEndereco)
     },
     

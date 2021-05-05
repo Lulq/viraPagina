@@ -40,13 +40,16 @@
                 <p><strong>Cadastre seus dados <br> para poder usufruir do <br> site</strong> </p>
                 <form action='/usuarios' method="POST">
 
-                    <input type="nome" name="nome" id="nome" placeholder="Nome">
+                    <input type="nome" name="nome" id="nome" placeholder="Nome" required>
                     <input type="telefone" name="telefone" id="telefone" placeholder="Telefone(Whatsapp)">
-                    <input type="login" name="login" id="email" placeholder="E-mail">
-                    <input type="password" name="senha" id="senha" placeholder="Senha">
-                    <input type="password" name="senhaconfirma" id="senhaconfrima" placeholder="Confirmar senha">
-
-                    <button type="submit">Próximo</button>
+                    <input type="login" name="login" id="email" placeholder="E-mail" required>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                    <input type="password" name="senhaconfirma" id="senhaconfrima" placeholder="Confirmar senha" required>
+                    <input type="imagem" name="imagem" id="imagem" placeholder="Adicione um link para sua foto">
+                    
+                    <div class="submit-button">
+                        <button type="submit">Próximo</button>
+                    </div>
                 </form>
             </div>
         </div>

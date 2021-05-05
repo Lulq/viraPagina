@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,78 +9,108 @@
     <link rel="stylesheet" href="/css/style-livros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
-    
 
-  <header>
-    <div class="header-left">
-        <div class="logo">
-            <img src="/img/Vector.png" alt="">
-            <h2><a href="/">ViraPágina</a></h2>
+<body>
+
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="/img/Vector.png" alt="">
+                <h2><a href="/">ViraPágina</a></h2>
+            </div>
+            <p><a href="/sobre">Sobre</a></p>
+            <p><a href="/livros">Livros</a></p>
+            <p><a href="/usuarios/perfil">Perfil</a></p>
         </div>
-        <p><a href="/sobre">Sobre</a></p>
-        <p><a href="/livros">Livros</a></p>
-        <p><a href="/usuarios/perfil">Perfil</a></p>
-    </div>
-    <div class="header-right" id="wfind">
-        <input class="text" type="text" name="filter" placeholder="Escreva o título, autor ou ISBN"> </input>
-        <button type="submit" class="left" onclick="window.location.href='/usuarios/login'">Buscar</button> 
-    </div>
-</header>
+        <div class="header-right" id="wfind">
+            <input class="text" type="text" name="filter" placeholder="Escreva o título, autor ou ISBN"> </input>
+            <button type="submit" class="left" onclick="window.location.href='/usuarios/login'">Buscar</button>
+        </div>
+    </header>
 
     <section class="category" id="category">
-      <h1 class="heading"> <i class="fas fa-book"></i> Seus livros Cadastrados <i class="fas fa-book"></i></h1>
-      <div class="box-container">
-          
-         
-         
-        <% for (let livro of seusLivros) {%> 
+        <h1 class="heading"> <i class="fas fa-book"></i> Seus livros Cadastrados <i class="fas fa-book"></i></h1>
+        <div class="box-container">
 
-        <div class="box">
-            <img src="<%=livro.imagem%>" alt="">
-            <h2><%=livro.titulo%></h2>
-            <h3><%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %> </h3>
-            <a href="/livros/<%=livro.id%>" class="btn"><strong>Info</strong></a>
-            
-            
-            <a href="/livros/seus_livros" action="/livros/<%=livro.id%>" method="DELETE" class="remove"><strong>Remover Livro</strong></a>
-          </div>
 
-        <%}%>
-         
-      
 
-      </div>
+            <% for (let livro of seusLivros) {%>
+
+                <div class="box">
+                    <img src="<%=livro.imagem%>" alt="">
+                    <h2>
+                        <%=livro.titulo%>
+                    </h2>
+                    <h3>
+                        <%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %>
+                    </h3>
+                    <a href="/livros/<%=livro.id%>" class="btn"><strong>Info</strong></a>
+
+
+                    <button onclick="removerLivro('<%=livro.id%>')" class="remove"><strong>Remover
+                            Livro</strong></button>
+                </div>
+
+                <%}%>
+
+
+
+
+        </div>
     </section>
 
-          <footer>
-              <div class="footer-left">
-                  <img src="/img/Vector2.png" alt="Ícone de livro">
-                  <div class="linha-1">
-                      <p>Baixe agora</p>
-                      <p>Licensa</p>
-                  </div>
-                  <div class="linha-2">
-                      <p>Sobre</p>
-                      <p>Funcionalidades</p>
-                      <p>Doações</p>
-                      <p>Carreiras</p>
-                      <p>Ajuda</p>
-                      <p>Política de Privacidade</p>
-        
-                  </div>
-                  <div class="linha-3">
-                      <p>© 2021 Todos os direitos reservados</p>
-                  </div>
-              </div>
-              <div class="footer-right">
-                  <p>Baixe o App</p>
-                  <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" alt="">
-        
-              </div>
-        
-          </footer>
+    <footer>
+        <div class="footer-left">
+            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <div class="linha-1">
+                <p>Baixe agora</p>
+                <p>Licensa</p>
+            </div>
+            <div class="linha-2">
+                <p>Sobre</p>
+                <p>Funcionalidades</p>
+                <p>Doações</p>
+                <p>Carreiras</p>
+                <p>Ajuda</p>
+                <p>Política de Privacidade</p>
 
-  
+            </div>
+            <div class="linha-3">
+                <p>© 2021 Todos os direitos reservados</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Baixe o App</p>
+            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png"
+                alt="">
+
+        </div>
+
+    </footer>
+
+    <script>
+        function removerLivro(id) {
+            fetch("http://localhost:3000/livros/", {
+                "method": "DELETE",
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": `{\"idlivro\":\"${id}\"}`
+            })
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+            
+
+        }
+
+
+
+    </script>
 </body>
+
 </html>
