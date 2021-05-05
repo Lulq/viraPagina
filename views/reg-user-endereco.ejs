@@ -39,9 +39,9 @@
             <div class="login">
                 <p><strong><%=novoUsuario.nome%>, informe sua localização</strong> </p>
                 <form action='/enderecos' method="POST">
-
-                    <input type="text" name="usuario_id" value="<%=novoUsuario.id%>">
-
+                    <div class="ocult">
+                        <input type="text" name="usuario_id" value="<%=novoUsuario.id%>">
+                    </div>
 
                     <input type="cidade" name="cidade" id="cidade" placeholder="Cidade">
                     <input type="estado" name="estado" id="estado" placeholder="Estado">

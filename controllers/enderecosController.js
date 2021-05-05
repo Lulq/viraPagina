@@ -26,7 +26,8 @@ const enderecosController = {
             // cep
         })
         
-        return res.json(novoEndereco)
+        return res.redirect('/usuarios/login?acao=cadastro-usuario-sucesso');
+
     },
     
     update: async (req, res) => {

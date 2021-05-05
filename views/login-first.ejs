@@ -38,9 +38,7 @@
         </div>
         <div class="right">
             <div class="header">
-                <% if(typeof mensagem !== "undefined") { %>
-                    <h5 class="confirmation-message"> <%= mensagem %> </h5>
-                <% } %>
+                <h5 class="confirmation-message"> Tudo certo, sua conta foi criada! </h5>
                 <h2><strong>Faça seu login para usufruir do site</strong></h2>
             </div>
             <form action="/usuarios/login" class="form" method="POST">
@@ -51,9 +49,7 @@
                     <img src="/img/google-logo-1.png" alt="">
                 </div> -->
                 <div class="cadastro">
-                    
-                    <!-- <button class="cadastrar" id="button" href='/usuarios/cadastro'>Faça seu cadastro</button> -->
-                    <a  class="link-cadastrar" href="/usuarios/cadastro">Faça seu cadastro</a>
+                                      
                     <button type="submit" > Começar → </button>
                 </div>
             </form>
@@ -63,15 +59,13 @@
 
     <footer>
         <div class="footer-left">
-            <p><a href="/">
-                <img src="/img/Vector2.png" alt="Ícone de livro">
-            </a></p>
+            <img src="/img/Vector2.png" alt="Ícone de livro">
             <div class="linha-1">
                 <p>Baixe agora</p>
                 <p>Licensa</p>
             </div>
             <div class="linha-2">
-                <p><a href="/sobre">Sobre</a></p>
+                <p>Sobre</p>
                 <p>Funcionalidades</p>
                 <p>Doações</p>
                 <p>Carreiras</p>
