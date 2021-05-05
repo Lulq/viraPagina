@@ -2,6 +2,7 @@ const { Livro , Autor, Idioma, Genero, Usuario, sequelize } = require('../models
 const { v4 : uuidv4 } = require('uuid')
 const { user } = require('./usuariosController')
 let uuid = uuidv4()
+const {Op} = require('sequelize');
 
 
 const livrosController = {
@@ -38,6 +39,17 @@ const livrosController = {
         })
 
         return res.render('seus-livros', {seusLivros} )
+    },
+
+    pesquisa: async (req,res) => {
+        let {termo} = req.body
+        let resultados = await Livro.findAll({
+            where:{
+                titulo: {[Op.like]: `%${termo}%`}
+            }
+        })
+        console.log(termo)
+        return res.send(resultados)
     },
 
     livro: async ( req, res ) => {

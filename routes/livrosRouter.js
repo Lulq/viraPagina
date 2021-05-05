@@ -30,5 +30,8 @@ router.put('/:id', ValidarModificacaoLivro, livrosController.update)
 
 router.delete('/', livrosController.delete)
 
+//rota da busca
+router.post('/pesquisa', livrosController.pesquisa)
+
 
 module.exports = router
