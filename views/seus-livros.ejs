@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style-your-books.css">
+    <link rel="stylesheet" href="/css/style-livros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -22,9 +22,8 @@
         <p><a href="/usuarios/perfil">Perfil</a></p>
     </div>
     <div class="header-right" id="wfind">
-        <input class="text" type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
-        <button class="left" onclick="window.location.href='usuarios/login'">Login</button>
-        <button class="right" onclick="window.location.href='usuarios/cadastro'">Criar Conta</button>
+        <input class="text" type="text" name="filter" placeholder="Escreva o título, autor ou ISBN"> </input>
+        <button type="submit" class="left" onclick="window.location.href='/usuarios/login'">Buscar</button> 
     </div>
 </header>
 
@@ -32,87 +31,26 @@
       <h1 class="heading"> <i class="fas fa-book"></i> Seus livros Cadastrados <i class="fas fa-book"></i></h1>
       <div class="box-container">
           
-          <div class="box">
-             <h2>Terras sem fim - Jorge Amado </h2>
-          <img src="/img/image (1).jpg" alt="">
-          <h3>AUTO - AJUDA</h3>
          
-          <a href="#" class="btn"><strong>Troca</strong></a>
-        </div>
+         
+        <% for (let livro of seusLivros) {%> 
 
         <div class="box">
-            <h2>Auto da Compadecida - Ariano Suassuna</h2>
-            <img src="/img/image (5).jpg" alt="">
-            <h3>LITERATURA E FICÇÃO</h3>
-            <a href="#" class="btn"><strong>Troca</strong></a>
+            <img src="<%=livro.imagem%>" alt="">
+            <h2><%=livro.titulo%></h2>
+            <h3><%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %> </h3>
+            <a href="/livros/<%=livro.id%>" class="btn"><strong>Info</strong></a>
+            <a href="/livros/<%=livro.id%>" class="remove"><strong>Remover Livro</strong></a>
           </div>
 
-          <div class="box">
-            <h2>Tieta do Agreste - Jorge Amado</h2>
-            <img src="/img/image (3).jpg" alt="">
-            <h3>LITERATURA E FICÇÃO</h3>
-            <a href="#" class="btn"><strong>Venda</strong> </a>
-          </div>
-
-          <div class="box">
-            <h2>Macaron - Pierre Hermé</h2>
-            <img src="/img/image (4).jpg" alt="">
-            <h3>GASTRONOMIA</h3>
-            <a href="#" class="btn"><strong>Venda</strong></a>
-          </div>
-
-          <div class="box">
-            <h2>Ervas e temperos - Tom Stobart</h2>
-            <img src="/img/image (9).jpg" alt="">
-            <h3>GASTRONOMIA</h3>
-            <a href="#" class="btn"><strong>Venda</strong></a>
-          </div>
+        <%}%>
+         
+      
 
       </div>
     </section>
 
-    <section class="category" id="category">
-        <h1 class="heading"> <i class="fas fa-book"></i> Seus livros Favoritos <i class="fas fa-book"></i></h1>
-        <div class="box-container">
-            
-            <div class="box">
-              <h2>Byte - New looping video app</h2>
-            <img src="/img/image (1).jpg" alt="">
-            <h3>APP DESIGN</h3>
-           
-            <a href="#" class="btn"><strong>Troca</strong></a>
-          </div>
-  
-          <div class="box">
-              <h2>Byte - New looping video app</h2>
-              <img src="/img/image (5).jpg" alt="">
-              <h3>APP DESIGN</h3>
-              <a href="#" class="btn"><strong>Troca</strong></a>
-            </div>
-  
-            <div class="box">
-              <h2>Slideban - Pitch deck design</h2>
-              <img src="/img/image (3).jpg" alt="">
-              <h3>BRANDING</h3>
-              <a href="#" class="btn"><strong>Venda</strong> </a>
-            </div>
-  
-            <div class="box">
-              <h2>Dashkit - Track your sales</h2>
-              <img src="/img/image (4).jpg" alt="">
-              <h3>WEB APP</h3>
-              <a href="#" class="btn"><strong>Venda</strong></a>
-            </div>
-  
-            <div class="box">
-              <h2>Aplle park - Augmented reality</h2>
-              <img src="/img/image (9).jpg" alt="">
-              <h3>AUGMENTED REALITY</h3>
-              <a href="#" class="btn"><strong>Venda</strong></a>
-            </div>
-            </div>
-
-            <footer>
+          <footer>
               <div class="footer-left">
                   <img src="/img/Vector2.png" alt="Ícone de livro">
                   <div class="linha-1">

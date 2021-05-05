@@ -7,6 +7,17 @@ body {
   margin: 0px;
 }
 
+a:link {
+  text-decoration:none;
+  }
+a:visited {
+  color: black;
+  text-decoration:none;
+  }
+a:hover {
+  text-decoration:none;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -211,6 +222,26 @@ button {
   border: 1px solid rgba(204,204,204);
 }
 
+select {
+  color: rgb(114, 114, 114);
+  text-align: left;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: bold;
+  padding: 15px;
+  width: 97%;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  border: 1px solid rgba(204,204,204);
+
+}
+
+.login button {
+  color: white;
+  background-color: rgba(140,48,245,1);
+  width: 98%;
+  
+}
 
 .banner-login2 {
   align-items: flex-start;
@@ -227,6 +258,10 @@ button {
   justify-content: space-around;
   margin-top: -100px;
 }
+
+/* .add-foto {
+  margin-bottom: -20px;
+} */
 
 .add-foto h3 {
   font-size: 34px;
@@ -261,7 +296,6 @@ button {
 footer {
     
   position:absolute;
-  
   height: 280px;
   width:100%;
   display:flex;

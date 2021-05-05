@@ -1,7 +1,6 @@
 const { Usuario, sequelize } = require('../models');
 const bcrypt = require('bcryptjs')
 const { v4: uuidv4 } = require('uuid');
-const { response } = require('express');
 let uuid = uuidv4()
 
 const usuariosController = {
@@ -44,8 +43,8 @@ const usuariosController = {
                 where: { id }  
             })
 
-        console.log(`Este é o ID recebido do url: ${id}`)
-        console.log(JSON.stringify(usuario, null, 2))
+        // console.log(`Este é o ID recebido do url: ${id}`)
+        // console.log(JSON.stringify(usuario, null, 2))
         
         return res.render('perfil',{ usuario });  // renderiza a view que queremos, passando o objeto livro
     },

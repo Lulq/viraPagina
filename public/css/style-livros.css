@@ -240,10 +240,19 @@ button {
   align-items: flex-end;
 }
 
+.remove strong{
+  color: blueviolet;
+ 
+}
 
 .category .box-container .box img {
     width: 100%;
     height: 250px;
+}
+
+.category .box-container .box img:hover {
+  width:105%;
+  height: 105%;
 }
 
 .category .box-container .box h2 {
