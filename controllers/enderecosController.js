@@ -26,7 +26,8 @@ const enderecosController = {
             // cep
         })
         
-        return res.json(novoEndereco)
+        return res.render('login-first')
+
     },
     
     update: async (req, res) => {
