@@ -1,6 +1,6 @@
 module.exports = {
   "username": "root",
-  "password": "teste123",
+  "password": "12345",
   "database": "virapagina",
   "host": "127.0.0.1",
   "dialect": "mysql"

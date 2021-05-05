@@ -312,6 +312,20 @@ main{
   color:rgba(86, 255, 255, 0.904) !important;
 }
 
+.botao {
+  background-color:rgba(241,228,255,1);
+  color: rgba(140,48,245,1);
+  border:none;
+  border-radius:8px;
+  width: 100px;
+  height: 40px;
+  font-size:14px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  
+}
+
 /* .right .form button {
     height: 40px;
     border-radius: 3px;
