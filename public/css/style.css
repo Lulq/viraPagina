@@ -184,6 +184,7 @@ button {
 
 .top-left img#book-img {
     max-width: 100%;
+    width: 600px;
     border-radius: 5px;
 }
 
@@ -232,6 +233,8 @@ button {
     justify-content: space-between;
     height: auto;
 }
+
+
 
 #book-actions.buttons button{
     margin-bottom: 15px;
