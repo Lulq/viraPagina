@@ -259,6 +259,7 @@ main{
 .cadastrar a {
     color:#738f91;
     text-decoration: none;
+
 }
 
 .cadastrar a:hover {
@@ -287,6 +288,16 @@ main{
 
 /* right do formulário*/
 
+.confirmation-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:blueviolet;
+  margin-bottom: 0;
+  background-color: rgb(224, 178, 178, .3);
+  padding : 3px;
+}
+
 .right .cadastro{
     display: flex;
     justify-content: space-between;
@@ -294,6 +305,8 @@ main{
 
 
 .right .header h2 {
+    padding-top:10px;
+    margin-top:0px;
     margin-bottom: 5px;
     color: #000;
 }
@@ -311,6 +324,7 @@ main{
 .cadastro .link-cadastrar a {
   color:rgba(86, 255, 255, 0.904) !important;
 }
+
 
 .botao {
   background-color:rgba(241,228,255,1);
@@ -335,10 +349,6 @@ main{
     font-size: 1.1rem;
     margin-bottom: 5px;
     cursor: pointer;
-} */
-
-/* .right .form button:hover {
-    background-color: #50609b;
 } */
 
 footer {
@@ -403,3 +413,7 @@ footer {
   .footer-right img {
     width:135px;
   }
+  .linha-2 a {
+    color: white;
+    text-decoration: none;
+}

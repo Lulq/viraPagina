@@ -39,9 +39,9 @@
             <div class="login">
                 <p><strong><%=novoUsuario.nome%>, informe sua localização</strong> </p>
                 <form action='/enderecos' method="POST">
-
-                    <input type="text" name="usuario_id" value="<%=novoUsuario.id%>">
-
+                    <div class="ocult">
+                        <input type="text" name="usuario_id" value="<%=novoUsuario.id%>">
+                    </div>
 
                     <input type="cidade" name="cidade" id="cidade" placeholder="Cidade">
                     <input type="estado" name="estado" id="estado" placeholder="Estado">
@@ -160,13 +160,15 @@
 
     <footer>
         <div class="footer-left">
-            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <p><a href="/">
+                <img src="/img/Vector2.png" alt="Ícone de livro">
+            </a></p>
             <div class="linha-1">
                 <p>Baixe agora</p>
                 <p>Licensa</p>
             </div>
             <div class="linha-2">
-                <p>Sobre</p>
+                <p><a href="/sobre">Sobre</a></p>
                 <p>Funcionalidades</p>
                 <p>Doações</p>
                 <p>Carreiras</p>
@@ -180,12 +182,14 @@
         </div>
         <div class="footer-right">
             <p>Baixe o App</p>
-            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" alt="">
+            <img src="img/apps.png" alt="">
 
         </div>
 
     </footer>
-
+  
 </body>
+
+<script src="js/main.js" ></script>
 
 </html>

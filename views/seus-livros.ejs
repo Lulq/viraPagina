@@ -62,13 +62,15 @@
 
     <footer>
         <div class="footer-left">
-            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <p><a href="/">
+                <img src="/img/Vector2.png" alt="Ícone de livro">
+            </a></p>
             <div class="linha-1">
                 <p>Baixe agora</p>
                 <p>Licensa</p>
             </div>
             <div class="linha-2">
-                <p>Sobre</p>
+                <p><a href="/sobre">Sobre</a></p>
                 <p>Funcionalidades</p>
                 <p>Doações</p>
                 <p>Carreiras</p>
@@ -82,35 +84,14 @@
         </div>
         <div class="footer-right">
             <p>Baixe o App</p>
-            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png"
-                alt="">
+            <img src="img/apps.png" alt="">
 
         </div>
 
     </footer>
-
-    <script>
-        function removerLivro(id) {
-            fetch("http://localhost:3000/livros/", {
-                "method": "DELETE",
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                "body": `{\"idlivro\":\"${id}\"}`
-            })
-                .then(response => {
-                    console.log(response);
-                })
-                .catch(err => {
-                    console.error(err);
-                });
-            
-
-        }
-
-
-
-    </script>
+  
 </body>
+
+<script src="js/main.js" ></script>
 
 </html>
