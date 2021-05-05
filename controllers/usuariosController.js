@@ -49,6 +49,12 @@ const usuariosController = {
         return res.render('perfil',{ usuario });  // renderiza a view que queremos, passando o objeto livro
     },
 
+    //logout
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
+    },
+
     index: async (req, res) => {
         let usuarios = await Usuario.findAll(
             { include: ["livros", "endereco_usuario" ] }
@@ -76,7 +82,7 @@ const usuariosController = {
     cadastro_usuario: async (req, res) => {
         res.render('reg-user')
     },
-
+    
     update: async (req, res) => {
         const { nome, cpf, telefone, login, senha, livros_favoritos, imagem } = req.body
         const senhaCrypt = bcrypt.hashSync(senha, 10)
