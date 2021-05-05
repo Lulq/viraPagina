@@ -294,6 +294,10 @@ button {
   color:  #8C30F5;
 }
 
+.ocult {
+  display:none;
+}
+
 .concluir {
   background-color: #0B0D17;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vira Página</title>
+    <link rel="stylesheet" href="/css/style-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="/img/Vector.png" alt="">
+                <h2><a href="/">ViraPágina</a></h2>
+            </div>
+            <p><a href="/sobre">Sobre</a></p>
+            <p><a href="/livros">Livros</a></p>
+            <p>Perfil</p>
+        </div>
+        <div class="header-right" id="wfind">
+            <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
+            <button class="left">Login</button>
+            <button class="right" onclick="window.location.href='/usuarios/cadastro'">Criar Conta</button>
+        </div>
+    </header>
+    
+    </section>
+   
+    <main>
+    <div class="container2">
+        <div class="left">
+            <img src="/img/capa.png" alt="">
+        </div>
+        <div class="right">
+            <div class="header">
+                <h5 class="confirmation-message"> Tudo certo, sua conta foi criada! </h5>
+                <h2><strong>Faça seu login para usufruir do site</strong></h2>
+            </div>
+            <form action="/usuarios/login" class="form" method="POST">
+                <input type="text" class="login" name="login" placeholder="E-mail">
+                <input type="password" class="senha" id="password" name="senha" placeholder="Senha">
+                <!-- <div class="google">
+                    <P>Faça login com sua conta Google</P>
+                    <img src="/img/google-logo-1.png" alt="">
+                </div> -->
+                <div class="cadastro">
+                                      
+                    <button type="submit" > Começar → </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="footer-left">
+            <img src="/img/Vector2.png" alt="Ícone de livro">
+            <div class="linha-1">
+                <p>Baixe agora</p>
+                <p>Licensa</p>
+            </div>
+            <div class="linha-2">
+                <p>Sobre</p>
+                <p>Funcionalidades</p>
+                <p>Doações</p>
+                <p>Carreiras</p>
+                <p>Ajuda</p>
+                <p>Política de Privacidade</p>
+
+            </div>
+            <div class="linha-3">
+                <p>© 2021 Todos os direitos reservados</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>Baixe o App</p>
+            <img src="https://www.freepnglogos.com/uploads/app-store-logo-png/apple-app-store-travel-awards-globestamp-7.png" alt="">
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
