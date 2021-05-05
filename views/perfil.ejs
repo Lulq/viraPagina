@@ -23,9 +23,12 @@
                 <p>Perfil</p>
             </div>
             <div class="header-right" id="wfind">
-                <input class="text" type="text" name="filter" placeholder="Escreva o título, autor ou ISBN"> </input>
-                <button type="submit" class="left" onclick="window.location.href='/usuarios/login'">Buscar</button> <!--Continuar amanhã-->
-              
+
+                <form action="/pesquisar" method="POST"> 
+                    <input class="text" type="text" name="filter" placeholder="Escreva o título, autor ou ISBN"> </input>
+                    <button type="submit" class="left">Buscar</button> <!--Continuar amanhã-->
+                </form>
+
             </div>
         </header>
 
@@ -55,6 +58,7 @@
                 </div>
                 <div class="logout">
                     <a href="/usuarios/logout">Encerrar Sessão</a>
+                  
                 </div>
 
             </div>
