@@ -30,5 +30,6 @@ module.exports = (sequelize, DataTypes) => {
         // cria a relação de usuário com o seu endereço, um usuário pode cadastrar mais de um endereço.
         Usuario.hasMany(models.Endereco_usuario, {as:"endereco_usuario", foreignKey: "usuario_id"})
     }
+
     return Usuario;
 }

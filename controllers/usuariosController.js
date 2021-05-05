@@ -1,3 +1,4 @@
+
 const { Usuario, sequelize } = require('../models');
 const bcrypt = require('bcryptjs')
 const { v4: uuidv4 } = require('uuid');
@@ -106,6 +107,7 @@ const usuariosController = {
             where: { id }
         })
         return res.json(deletarUsuario)
+
     }
 }
 

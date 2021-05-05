@@ -11,6 +11,7 @@ router.get('/', usuariosController.index);
 
 router.post('/', ValidarCadastro, usuariosController.create);
 
+
 // rota para a view cadastrar usuário
 router.get('/cadastro', usuariosController.cadastro_usuario)
 
@@ -29,7 +30,6 @@ router.get('/perfil', loginAuthenticate, usuariosController.user)
 router.put('/:id', usuariosController.update);
 
 router.delete('/:id', usuariosController.delete);
-
 
 
 module.exports = router;
