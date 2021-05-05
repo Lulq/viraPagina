@@ -53,12 +53,13 @@
 
                 <div class="info">
                     <h5>Disponível para Troca</h5>
-                  
+                <div class="fonte">
                     <p id="autor"><%= livro.autor.autor %> </p>
                     <p id="edicao">Editora: <%=livro.editora %></p>
                     <p id="genero"><%=livro.genero.genero %></p>
                     <p id="ano">Publicado em <%=livro.ano %></p>
                     <p id="ISBN">ISBN: <%=livro.isbn%></p>
+                </div>
                 </div>
 
                 <!-- <div id="book-actions" class="buttons">
@@ -67,7 +68,7 @@
 
                     <div class="whatsaap">
                         <a target="_blank" href="https://api.whatsapp.com/send?phone=+*<%=livro.usuario.telefone%>*&text=%20Boa tarde <%=livro.usuario.nome%> vi seu livro *<%=livro.titulo%>* no *ViraPágina*, vamos trocar?" >
-                            <button type="submit">Conversar com Leitor</button>
+                            <button class="letra" type="submit">Conversar com Leitor</button>
                         </a>
 
                         

@@ -13,11 +13,15 @@
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     margin:0px;
      
  /* Cabeçalho    */
 
+}
+
+.fonte {
+    font-family: 'Manrope', sans-serif !important;
 }
 
 a:link {
@@ -441,6 +445,17 @@ article .profile-label {
 }
 .il-3::marker {
     color:rgba(193, 229, 192, 1);
+}
+
+
+.whatsaap {
+    margin-left: 250px;
+    padding: 10px;
+}
+
+.letra {
+    padding: 7px;
+    font-size: 12px;
 }
 
 
