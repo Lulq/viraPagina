@@ -16,13 +16,13 @@
                 <img src="/img/Vector.png" alt="">
                 <h2>ViraPágina</h2>
             </div>
-            <p>Sobre</p>
-            <p>Livros</p>
+            <p><a href="/sobre">Sobre</a></p>
+            <p><a href="/livros">Livros</a></p>
             <p><a href="/usuarios/perfil">Perfil</a></p>
         </div>
         <div class="header-right" id="wfind">
-            <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
-            <button class="left">Buscar</button>
+            <input type="text" placeholder="Escreva o título, autor ou ISBN">
+            <button type="submit" class="left">Buscar</button>
         </div>
     </header>
 
@@ -39,10 +39,15 @@
             <div class="login">
                 <p><strong>Coloque as<br> informações do <br> seu livro</strong> </p>
                 <form action="/livros" method="POST">
-                    <input type="text" name="ISBN" id="livros" placeholder="ISBN">
+                    <input type="text" name="isbn" id="isbn" placeholder="ISBN">
                     <input type="text" name="titulo" id="livros" placeholder="Título da Obra" required>
+
+                    <input type="text" name="autor_id" value="<%=autores.id%>" id="autor" placeholder="Autor">
+
                     <input type="text" name="editora" id="editora" placeholder="Editora">
+                    <input type="text" name="edicao" id="edicao" placeholder="Edição">
                     <input type="text" name="conservacao" id="livros" placeholder="Estado de Preservação">
+                    <input type="text" name="imagem" id="imagem" placeholder="Insira um link com a imagem do seu livro">
 
 
                     <select name="genero_id" id="genero_id">

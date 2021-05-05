@@ -1,5 +1,6 @@
-const { Livro , Autor, Idioma, Genero, sequelize } = require('../models')
+const { Livro , Autor, Idioma, Genero, Usuario, sequelize } = require('../models')
 const { v4 : uuidv4 } = require('uuid')
+const { user } = require('./usuariosController')
 let uuid = uuidv4()
 
 
@@ -31,7 +32,12 @@ const livrosController = {
     },
 
     yourbooks: async (req, res) => {
-        res.render('seus-livros')
+        const { id } = req.session.usuarioLogado
+        let seusLivros = await Livro.findAll({ 
+            where: {usuario_id : id }
+        })
+
+        return res.render('seus-livros', {seusLivros} )
     },
 
     livro: async ( req, res ) => {
@@ -53,6 +59,8 @@ const livrosController = {
     },
 
     create: async (req, res) => {
+        const { id } = req.session.usuarioLogado
+                
         let {titulo, isbn, editora, ano, quantidade, conservacao, venda, troca, imagem, usuario_id, idioma_id, autor_id, genero_id } = req.body
         let novoLivro = await Livro.create({
             id : uuid,
@@ -65,11 +73,13 @@ const livrosController = {
             venda, 
             troca, 
             imagem, 
-            usuario_id, 
+            usuario_id : id, 
             idioma_id, 
             autor_id, 
             genero_id
         })
+
+        console.log(`Este é o Usuario Logado ${JSON.stringify(user)}`)
 
         return res.render('index', novoLivro)
     },
