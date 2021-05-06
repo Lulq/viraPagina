@@ -23,7 +23,7 @@ const autoresController = {
             autor
         })
        
-        return res.render('novo-livro',{novoAutor, autores, generos, idiomas})
+        return res.render('added-autor',{novoAutor, autores, generos, idiomas})
       
     },
     
