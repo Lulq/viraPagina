@@ -20,7 +20,7 @@ const livrosController = {
         const autores = await Autor.findAll()
         const generos = await Genero.findAll()
         const idiomas = await Idioma.findAll()
-        console.log(autores)
+        
         return res.render('novo-livro', {autores, generos, idiomas})
     },
 
@@ -90,8 +90,6 @@ const livrosController = {
             autor_id, 
             genero_id
         })
-
-        console.log(`Este é o Usuario Logado ${JSON.stringify(user)}`)
 
         return res.render('index', novoLivro)
     },

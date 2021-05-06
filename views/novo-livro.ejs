@@ -40,9 +40,9 @@
                 <p><strong>Coloque as<br> informações do <br> seu livro</strong> </p>
                 <form action="/livros" method="POST">
                     <select name="autor_id" class="autor_id">
-                        <option selected disabled>Selecione o autor</option>
+                        <option selected disabled >Selecione o autor</option>
                         <% for (let autor of autores) { %>
-                            <option>
+                            <option value="<%=autor.id%>">
                                 <%=autor.autor%>
                             </option>
                             <%}%>                            
@@ -112,12 +112,6 @@
             </div>
 
         </div>
-
-
-
-
-
-
 
     </main>
 
