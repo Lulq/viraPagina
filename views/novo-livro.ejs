@@ -21,8 +21,10 @@
             <p><a href="/usuarios/perfil">Perfil</a></p>
         </div>
         <div class="header-right" id="wfind">
-            <input type="text" placeholder="Escreva o título, autor ou ISBN">
-            <button type="submit" class="left">Buscar</button>
+            <form action="/livros/pesquisa" method="POST">
+                <input type="text" name="termo" placeholder="Escreva o título, autor ou ISBN"> 
+                <button type="submit" class="left">Buscar</button>
+            </form>
         </div>
     </header>
 
@@ -37,21 +39,21 @@
             </div>
 
             <div class="login">
-                <p><strong>Coloque as<br> informações do <br> seu livro</strong> </p>
+                <p><strong>Preencha as<br> informações do <br> seu livro</strong> </p>
                 <form action="/livros" method="POST">
                     <select name="autor_id" class="autor_id">
-                        <option selected disabled >Selecione o autor</option>
+                        <option selected disabled>Selecione o autor</option>
                         <% for (let autor of autores) { %>
                             <option value="<%=autor.id%>">
                                 <%=autor.autor%>
                             </option>
-                            <%}%>                            
+                            <%}%>
                     </select>
                     <div class="add-autor">
                         <span>não encontrou na lista?</span>
                         <a href="/autores/add">adicione um autor</a>
                     </div>
-                  
+
                     <input type="text" name="titulo" id="livros" placeholder="Título da Obra" required>
                     <input type="text" name="isbn" id="isbn" placeholder="ISBN">
                     <input type="text" name="editora" id="editora" placeholder="Editora">
@@ -78,7 +80,7 @@
                             <%}%>
                     </select>
 
-              
+
 
                     <input type="text" name="ano" id="ano" placeholder="Ano de Publicação">
                     <button type="submit">Adicionar</button>
@@ -86,40 +88,13 @@
             </div>
         </div>
 
-
-        <div class="banner-login2">
-
-            <div class="celular">
-                <img src="/img/celular.png" alt="celular" class="logo">
-            </div>
-
-            <div class="add-foto">
-                <h3><strong>Adicione fotos do seus livros </strong> </h3>
-                <p>Livros com fotos têm mais chance de serem <br> escolhidos. Capture a essência do conhecimento que
-                    você quer trocar!</p>
-
-                <div class="btn-add">
-
-                    <div class="add-left">
-                        <button>Pular</button>
-                    </div>
-
-                    <div class="add-right">
-                        <button>Adicione Fotos</button>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
     </main>
 
     <footer>
         <div class="footer-left">
             <p><a href="/">
-                <img src="/img/Vector2.png" alt="Ícone de livro">
-            </a></p>
+                    <img src="/img/Vector2.png" alt="Ícone de livro">
+                </a></p>
             <div class="linha-1">
                 <p>Baixe agora</p>
                 <p>Licensa</p>
@@ -144,7 +119,7 @@
         </div>
 
     </footer>
-  
+
 </body>
 
 

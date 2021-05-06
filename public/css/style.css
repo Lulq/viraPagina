@@ -161,6 +161,9 @@ button {
     font-weight: 800;
   
 }
+.vetorzao {
+    max-width: 500px !important;
+}
 
 .top-right {
     max-width: 10%;
@@ -184,6 +187,8 @@ button {
     background-color: rgba(140,48,245,1);
     color: white;
 }
+
+
 
 
 /* ================== Centro Superior Perfil Livro =====================*/
@@ -253,6 +258,8 @@ button {
     color: rgba(140, 48, 245, 1);
 }
 
+
+
 /* ========================INDEX ========================= */
 
 /* top-content */
@@ -307,7 +314,6 @@ button {
 
 .testimonials{
     background-color: rgba(140, 48, 245, 1);
-    width:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -455,13 +461,15 @@ article .profile-label {
 
 
 .whatsaap {
-    margin-left: 250px;
+    margin-left: 180px;
     padding: 10px;
 }
 
+
 .letra {
-    padding: 7px;
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 12px;
+    
 }
 
 
