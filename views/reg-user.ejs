@@ -21,7 +21,7 @@
             <p>Perfil</p>
         </div>
         <div class="header-right" id="wfind">
-            <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
+            <input type="text" placeholder="Pesquise pelo título"> </input>
             <button class="left" onclick="window.location.href='/usuarios/login'">Login</button>
             <button class="right">Criar Conta</button>
         </div>
@@ -38,7 +38,7 @@
 
             <div class="login">
                 <p><strong>Cadastre seus dados <br> para poder usufruir do <br> site</strong> </p>
-                <div class="erro">
+                <div class="erro" style="color:red;">
                     <% if(typeof mensagem !== "undefined" && mensagem != '') { %>
                         <h5 class="confirmation-message" > <%= mensagem %> </h5>
                     <% } %>
@@ -46,10 +46,11 @@
                 <form action='/usuarios' method="POST">
 
                     <input type="nome" name="nome" id="nome" placeholder="Nome" required>
-                    <input type="telefone" name="telefone" id="telefone" placeholder="Telefone(Whatsapp)">
+                    <input type="telefone" name="telefone" id="telefone" placeholder="Whatsapp:  55 (XX) 9999 9999">
                     <input type="login" name="login" id="email" placeholder="E-mail" required>
                     <input type="password" name="senha" id="senha" placeholder="Senha" required>
                     <input type="password" name="senhaconfirma" id="senhaconfrima" placeholder="Confirmar senha" required>
+                    <input type="text" name="livros_favoritos" id="livros_favoritos" placeholder="Diga quais são seus livros favoritos" required>
                     <input type="imagem" name="imagem" id="imagem" placeholder="Adicione um link para sua foto de usuário">
                     
                     <div class="submit-button">

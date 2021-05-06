@@ -81,6 +81,7 @@ const usuariosController = {
             nome,
             telefone,
             login,
+            livros_favoritos,
             senha: senhaCrypt,
         }) 
 
@@ -99,6 +100,10 @@ const usuariosController = {
 
         if (acao == "cadastro-usuario-require"){
             mensagem = "Campo obrigatório não preenchido, verifique as informações e tente novamente.";
+        }else if (acao == "cadastro-usuario-password"){
+            mensagem = "A senha deve conter entre 6 e 12 caracteres." 
+        }else if (acao == "cadastro-usuario-existingmail"){
+            mensagem = "O usuário informado já foi cadastrado, escolha um e-mail diferente"
         }
                 
         res.render('reg-user',{mensagem})
