@@ -24,6 +24,7 @@ router.get('/go/wpp', livrosController.gowpp)
 
 // renderizar a view de adicionar livro
 router.get('/novo/livro', livrosController.addBook)
+router.get('/novo/livro/adicionado', livrosController.added)
 
 router.post('/', ValidarLivro, livrosController.create)
 router.put('/:id', ValidarModificacaoLivro, livrosController.update)
