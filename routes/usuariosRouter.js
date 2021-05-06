@@ -9,7 +9,7 @@ const loginAuthenticate = require("../middlewares/loginAuthenticate")
 /* GET - Lista todos os usuários */
 router.get('/', usuariosController.index);
 
-router.post('/', ValidarCadastro, usuariosController.create);
+router.post('/', ValidarCadastro ,usuariosController.create);
 
 
 // rota para a view cadastrar usuário

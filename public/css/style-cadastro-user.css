@@ -189,6 +189,9 @@ button {
   width: 70%;
 }
 
+.ocult {
+  display:none;
+}
 
 .login {
   margin-left: 60px;

@@ -92,7 +92,16 @@ const usuariosController = {
     },
 
     cadastro_usuario: async (req, res) => {
-        res.render('reg-user')
+        
+        const {acao} = req.query;
+
+        let mensagem = "";
+
+        if (acao == "cadastro-usuario-require"){
+            mensagem = "Campo obrigatório não preenchido, verifique as informações e tente novamente.";
+        }
+                
+        res.render('reg-user',{mensagem})
     },
     
     update: async (req, res) => {
