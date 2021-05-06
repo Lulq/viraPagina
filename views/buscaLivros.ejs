@@ -1,96 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Livros</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Vira Página</title>
+    <link rel="stylesheet" href="/css/style-livros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
 
-    <main>
-        <header>
-            <div class="header-left">
-                <div class="logo">
-                    <img src="/img/logo-icon-black.png" alt="">
-                    <h2><a href="/">ViraPágina</a></h2>
-                </div>
-                <p><a href="/sobre">Sobre</a></p>
-                <p><a href="/livros">Livros</a></p>
-                <p><a href="/usuarios/perfil">Perfil</a></p>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="/img/Vector.png" alt="">
+                <h2><a href="/">ViraPágina</a></h2>
             </div>
-            <div class="header-right">
-                <button class="left" onclick="window.location.href='usuarios/login'">Login</button>
-                <button class="right" onclick="window.location.href='usuarios/cadastro'">Criar Conta</button>
-            </div>
-        </header>
-        <section class="top-content">
-            <div class="top-left">
-                <h3>Conecte-se com diversos leitores e troque experiências</h3>
-            </div>
-            <div class="top-right">
-                <form>
-                    <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
-                    <button type="submit">Buscar</button>
-                </form>
-                
-            </div>
-        </section>
-        
-        <section class="middle-content">
-            
-            <div class="middle-top">
-                <img class="main-image" src="/img/Cover-Image.png" alt="">
-                
-                <h2>Converse com vários leitores</h2>
-                
+            <p><a href="/sobre">Sobre</a></p>
+            <p>Livros</p>
+            <p><a href="/usuarios/perfil">Perfil</a></p>
+        </div>
+        <div class="header-right" id="wfind">
+            <input type="text" placeholder="Escreva o título, autor ou ISBN"> </input>
+            <button class="left" onclick="window.location.href='usuarios/login'">Login</button>
+            <button class="right" onclick="window.location.href='usuarios/cadastro'">Criar Conta</button>
+        </div>
+    </header>
+    
+    </section>
+    
+    <section class="category" id="category">
+        <h1 class="heading"> <i class="fas fa-book"></i> Livros Disponíveis <i class="fas fa-book"></i></h1>
+        <div class="box-container">
+
+            <% for (let livro of resultados) { %> 
+
+            <div class="box">
+                <img src=<%=livro.imagem %> alt="">
+                <h2><%=livro.titulo%></h2>
+                <h3><%=livro.editora%>, <%=livro.ano%>, <%= livro.conservacao %> </h3>
+                <a href="livros/pesquisa" class="btn"><strong>Saiba Mais</strong></a>
             </div>
 
 
-            <div class="middle-bottom">
-                <div class="middle-bottom-left">
-                    
-                        <div class="lim-1">
-                            <img class="tile" src="/img/Image 1 (2).png" alt="">
-                            <img class="circle" src="/img/circulo-amarelo.png" alt="">
-                        </div>
-                        <div class="lim-2">
-                            
-                            <img class="circle" src="/img/circulo-azul.png" alt="">
-                            <img class="tile" src="/img/Image 2 (2).png" alt="">
-                        </div>
-                        <div class="lim-3">
-                            <img class="tile" src="/img/Image 3 (2).png" alt="">
-                            <img class="circle" src="/img/circulo-rosa.png" alt="">
-                        </div>
-                                        
-                </div>
-                <div class="middle-bottom-right">
-                    <ul>
-                        <li class="il-1">
-                            <h5>Doação</h5>
-                            <p>Doe seus livros para instituições cadastradas</p>
-                        </li>
-                        <li class="il-2">
-                            <h5>Troca</h5>
-                            <p>Troque livros com leitores e negocie diretamente com eles</p>
-                        </li>
-                        <li class="il-3">
-                            <h5>Venda</h5>
-                            <p>Venda Livros usados ou raros e faça uma renda extra</p>
-                        </li>
-                    </ul>
+            <% } %>
 
-                </div>
+        </div>
+    </section>
 
-            </div>
-
-        </section>
-
-    </main>
     <footer>
         <div class="footer-left">
             <p><a href="/">

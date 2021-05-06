@@ -48,8 +48,8 @@ const livrosController = {
                 titulo: {[Op.like]: `%${termo}%`}
             }
         })
-        console.log(termo)
-        return res.send(resultados)
+        // return res.send(resultados)
+        return res.render('buscaLivros', {resultados})
     },
 
     livro: async ( req, res ) => {
