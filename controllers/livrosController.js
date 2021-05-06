@@ -1,6 +1,6 @@
 const { Livro , Autor, Idioma, Genero, Usuario, sequelize } = require('../models')
 const { v4 : uuidv4 } = require('uuid')
-const { user } = require('./usuariosController')
+
 let uuid = uuidv4()
 const {Op} = require('sequelize');
 
