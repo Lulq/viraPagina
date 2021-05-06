@@ -26,7 +26,7 @@ router.get('/go/wpp', livrosController.gowpp)
 router.get('/novo/livro', livrosController.addBook)
 router.get('/novo/livro/adicionado', livrosController.added)
 
-router.post('/', ValidarLivro, livrosController.create)
+router.post('/', livrosController.create)
 router.put('/:id', ValidarModificacaoLivro, livrosController.update)
 
 router.delete('/', livrosController.delete)
