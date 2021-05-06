@@ -191,6 +191,7 @@ button {
 
 
 .login {
+  font-family: 'Montserrat Alternates';
   margin-left: 15px;
   display: flex;
   width: 70%;
@@ -201,6 +202,11 @@ button {
 .login p {
   margin-top: 0;
   font-size: 45px;
+}
+
+.login p strong{
+  font-family: 'Montserrat Alternates';
+ 
 }
 
 .login form {
