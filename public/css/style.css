@@ -80,6 +80,12 @@ header #wfind.header-right button {
     margin-right: 15px;
 
 }
+header #wfind.header-right form {
+    display: flex;
+    align-items: center;
+  
+ }
+  
 /* ================= Fim do Header com Campo de busca =================== */
 
 .logo {

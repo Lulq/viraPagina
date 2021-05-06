@@ -68,6 +68,12 @@ header #wfind.header-right button {
 
 }
 
+header #wfind.header-right form {
+  display: flex;
+  align-items: center;
+
+}
+
 /* ================= Fim do Header com Campo de busca =================== */
 
 .logo {

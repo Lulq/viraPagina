@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Manrope&display=swap');
 
+:root{
+  --default-white: rgba(255, 255, 255, 1);
+  --default-purple: rgba(140,48,245,1);
+  --weak-purple: rgba(214, 177, 255, 1);
+  --pastel-blue: rgba(160, 220, 255, 1);
+  --pastel-green:rgba(193, 229, 192, 1);
+  --pastel-pink:rgba(255, 195, 216, 1);
+
+}
 
 body {
   font-family: 'Montserrat Alternates';
@@ -292,10 +301,38 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  color:blueviolet;
+  color:var(--default-purple);
   margin-bottom: 0;
-  background-color: rgb(224, 178, 178, .3);
+  background-color: rgba(214, 177, 255, .3);
   padding : 3px;
+}
+
+.link-cadastrar {
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(241,228,255,1);
+  border-radius: 8px;
+  color: var(--default-purple) !important;
+  padding: 10px;
+  font-weight: bold;
+  font-size:14px;
+  
+}
+
+.botao {
+  background-color:var(--default-purple);
+  color:white;
+  border:none;
+  border-radius:8px;
+  width: 100px;
+  height: 40px;
+  font-size:14px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  
 }
 
 .right .cadastro{
@@ -326,30 +363,8 @@ main{
 }
 
 
-.botao {
-  background-color:rgba(241,228,255,1);
-  color: rgba(140,48,245,1);
-  border:none;
-  border-radius:8px;
-  width: 100px;
-  height: 40px;
-  font-size:14px;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-  
-}
 
-/* .right .form button {
-    height: 40px;
-    border-radius: 3px;
-    border: none;
-    background-color: #2EC5CE;
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    cursor: pointer;
-} */
+
 
 footer {
     
