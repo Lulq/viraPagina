@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -39,11 +39,21 @@
             <div class="login">
                 <p><strong>Coloque as<br> informações do <br> seu livro</strong> </p>
                 <form action="/livros" method="POST">
-                    <input type="text" name="isbn" id="isbn" placeholder="ISBN">
+                    <select name="autor_id" class="autor_id">
+                        <option selected disabled>Selecione o autor</option>
+                        <% for (let autor of autores) { %>
+                            <option>
+                                <%=autor.autor%>
+                            </option>
+                            <%}%>                            
+                    </select>
+                    <div class="add-autor">
+                        <span>não encontrou na lista?</span>
+                        <a href="/autores/add">adicione um autor</a>
+                    </div>
+                  
                     <input type="text" name="titulo" id="livros" placeholder="Título da Obra" required>
-
-                    <input type="text" name="autor_id" id="autor" placeholder="Autor">
-
+                    <input type="text" name="isbn" id="isbn" placeholder="ISBN">
                     <input type="text" name="editora" id="editora" placeholder="Editora">
                     <input type="text" name="edicao" id="edicao" placeholder="Edição">
                     <input type="text" name="conservacao" id="livros" placeholder="Estado de Preservação">
@@ -68,6 +78,7 @@
                             <%}%>
                     </select>
 
+              
 
                     <input type="text" name="ano" id="ano" placeholder="Ano de Publicação">
                     <button type="submit">Adicionar</button>
@@ -134,7 +145,7 @@
         </div>
         <div class="footer-right">
             <p>Baixe o App</p>
-            <img src="img/apps.png" alt="">
+            <img src="/img/apps.png" alt="">
 
         </div>
 
@@ -142,6 +153,5 @@
   
 </body>
 
-<script src="js/main.js" ></script>
 
 </html>
