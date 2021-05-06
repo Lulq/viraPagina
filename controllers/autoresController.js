@@ -1,4 +1,4 @@
-const { Autor, sequelize } = require('../models')
+const { Livro , Autor, Idioma, Genero, Usuario, sequelize } = require('../models')
 
 const autoresController = {
     index: async (req, res) => {
@@ -6,12 +6,25 @@ const autoresController = {
         return res.json(autores);
     },
 
+    addAutor : async (req, res) => {
+        return res.render('add-autor')
+    },
+
+    added : async (req, res) => {
+        return res.render('added-autor')
+    },
+
     create: async (req, res) => {
+        const autores = await Autor.findAll()
+        const generos = await Genero.findAll()
+        const idiomas = await Idioma.findAll()
         let { autor } = req.body;
-        let novoAutor = await Autor.create({
+        const novoAutor = await Autor.create({
             autor
         })
-        return res.json(novoAutor)
+       
+        return res.render('added-autor',{novoAutor, autores, generos, idiomas})
+      
     },
     
     update: async (req, res) => {
